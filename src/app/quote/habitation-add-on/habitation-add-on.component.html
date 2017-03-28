@@ -1,0 +1,117 @@
+<div class="summary-fixed-bottom">
+  <div class="panel-page-header panel panel-default no-margin">
+    <div class="panel-heading">
+      <a class="picto" routerLink="/quote/habitation">
+        <span class="material-icons text-info">arrow_back</span>
+      </a>
+      <span class="panel-heading-title text-lg">
+        <strong>Ma sélection</strong>
+      </span>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="text-lg padding-vertical">
+          <p>Pour <strong>{{quoteService.amount | number:'1.2-2'}}</strong>€/mois vous êtes assuré en tant que <strong>locataire</strong> d'un <strong>{{quoteService.roomsNumber}} pièces</strong> dont
+            la valeur mobilère est de <strong>{{quoteService.habitationValue}}</strong>€</p>
+        </div>
+        <div class="block-note block-info">
+          <div class="block-note-icon"><span class="material-icons">info_outline</span></div>
+          <div class="block-note-text">
+            Cette valeur n'inclu pas certains objets tel que les objets précieux, ou les objets numériques/loisirs que vous emmenez à
+            l'extérieur de votre habitation.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="padding-vertical">
+          <div class="text-lg">Si besoin, étendez la garantie à vos objets les plus importants ...</div>
+        </div>
+        <div class="row">
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Extension sur un objet numérique</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/product-type/smartphone.svg" alt="phone" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Extension sur un objet de loisir</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/picto/velo.svg" alt="Vélo" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Extension sur un objet précieux</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/picto/montre.svg" alt="Montre" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-lg">Et même vous assurer pour votre santé</div>
+        <div class="row">
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Complémentaire santé</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button class="btn btn-fab btn-success text-lg">
+                      <img src="/assets/images/picto/coeur.svg" alt="santé" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <a routerLink="/quote/habitation-summary" class="btn btn-lg btn-raised btn-primary center-block">
+            Je m'assure
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

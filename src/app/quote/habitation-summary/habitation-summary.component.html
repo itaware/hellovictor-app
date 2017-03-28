@@ -1,0 +1,137 @@
+<div class="summary-fixed-bottom">
+  <div class="panel-page-header panel panel-default no-margin">
+    <div class="panel-heading">
+      <span class="panel-heading-title text-lg">
+        <strong>Ma sélection</strong>
+      </span>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="text-lg padding-vertical">
+          <p>Pour <strong>{{quoteService.amount | number:'1.2-2'}}</strong> €/mois vous avez assuré</p>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <div class="row">
+          <div class="list-group">
+            <div class="list-group-item" *ngIf="quoteService.habitationPremium > 0">
+              <div class="row">
+                <div class="flex-item">
+                  <div class="row-content-left">
+                    <div class="row-picture">
+                      <div class="btn btn-fab btn-info text-lg">
+                        <img src="/assets/images/picto/maison.svg" alt="Maison" />
+                      </div>
+                    </div>
+                    <div class="row-content">
+                      <div class="text-lg text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.roomsNumber}} pièces</strong> dont la valeur mobilère est de <strong>{{quoteService.habitationValue | number:'1.0-2'}}</strong>                        €</div>
+                    </div>
+                  </div>
+                  <div class="row-content-right">
+                    <div class="text-lg"><strong>{{quoteService.habitationPremium | number:'1.2-2'}}</strong></div>
+                    <div class="text-sm text-center">€/mois</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item" *ngFor="let vi of quoteService.valuableItems">
+              <div class="row">
+                <div class="flex-item">
+                  <div class="row-content-left">
+                    <div class="row-picture">
+                      <img src="/assets/images/form/macbook.jpg" alt="Macbook" class="img-responsive center-block" />
+                      <div class="pull-right">
+                        <span class="text-lg material-icons">photo_camera</span>
+                      </div>
+                    </div>
+                    <div class="row-content">
+                      <div class="text-lg text-semibold">{{vi.name}}</div>
+                    </div>
+                  </div>
+                  <div class="row-content-right">
+                    <div class="text-lg"><strong>{{vi.premium | number:'1.2-2'}}</strong></div>
+                    <div class="text-sm text-center">€/mois</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-lg">
+          Vous pouvez compléter avec ...
+        </div>
+
+        <div class="row">
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Un autre objet</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/valuable-item">
+                      <img src="/assets/images/product-type/smartphone.svg" alt="smartphone" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item" *ngIf="quoteService.habitationPremium === 0">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Une assurance habitation</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/habitation">
+                      <img src="/assets/images/picto/maison.svg" alt="Maison" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Une assurance santé</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button class="btn btn-fab btn-success text-lg" disabled>
+                      <img src="/assets/images/picto/coeur.svg" alt="Santé" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-lg">
+          Ou valider votre devis ...
+        </div>
+
+        <div class="group-container">
+          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block">
+            Je valide
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

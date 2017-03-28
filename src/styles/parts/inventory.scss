@@ -1,0 +1,35 @@
+.steps{
+  display:flex;
+  flex-wrap: wrap;
+}
+.step-item{
+
+
+  margin: 30px 0;
+  &-number{
+  }
+  &-preview{
+    padding: 0;
+  }
+  &-text{
+    padding: 10px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+.bubble-item {
+  width: 68px;
+  height: 78px;
+  margin-bottom: 20px;
+  background: url(/assets/images/bulle.svg) center center no-repeat;
+  background-size: contain;
+  line-height: 60px;
+  font-size: 52px;
+  font-family: $font-raleway;
+  color: #fff;
+  text-align: center;
+  &.bubble-step{
+    background-image: url(/assets/images/bulle-step.svg);
+  }
+}

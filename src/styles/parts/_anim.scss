@@ -1,0 +1,63 @@
+.block-anim{
+  .anim-zoom{
+      transform: scale(1);
+      transition: all 0.5s;
+  }
+  &.anim{
+    .anim-zoom{
+      transform: scale(1.03);
+    }
+  }
+  &.text-zoom{
+    transform: scale(0.90);
+    transition: all 0.4s;
+    &.anim{
+      transform: scale(1);
+    }
+  }
+  &.discover-radius{
+    position: relative;
+    .discover-inner{
+     clip-path: circle(0 at center);
+     transition: clip-path 4s;
+    }
+  }
+  &.anim{
+    .discover-inner{
+      clip-path: circle(100% at center);
+    }
+  }
+  .zoom-full{
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.6s;
+  }
+  &.anim{
+    .zoom-full{
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .pop-item{
+    > * {
+      transform: scale(0);
+      transition: all 0.6s;
+      &.anim{
+        transform: scale(1);
+      }
+    }
+  }
+
+
+}
+
+
+.cover-parallax{
+  .cover-inner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}

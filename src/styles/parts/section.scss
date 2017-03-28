@@ -1,0 +1,70 @@
+section, .section{
+  position: relative;
+}
+.section{
+  padding: 55px 15px 40px 15px;
+  border-bottom: 1px solid rgba($dusty-gray, 0.35);
+  @include clearfix();
+  &.section-gray{
+    background-color: $gallery;
+  }
+  &.section-hello{
+    background-image: url(/assets/images/hello-light.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+
+  .section-header{
+    padding-bottom: 30px;
+  }
+
+  .section-title{
+    margin: 0;
+    font-size: 26px;
+    text-transform: uppercase;
+    small{
+      font-size: 0.75em;
+      color: inherit;
+    }
+    @media(min-width: $screen-sm-min){
+      font-size: 36px;
+    }
+  }
+  .section-text{
+    font-size: 14px;
+    text-align: justify;
+    p+p{
+      margin-top: 30px;
+    }
+    @media(min-width: $screen-sm-min){
+      font-size: $text-md;
+    }
+  }
+  .text-heading{
+    font-size: 20px;
+  }
+  @media(max-width: $screen-sm-max){
+    .section-header{
+      padding-bottom: 10px;
+      br:not(.no-hidden){
+        display:none;
+      }
+      h3 {
+        font-size: 16px;
+      }
+      .section-title{
+        font-size: 22px;
+      }
+      .text-heading{
+        font-size: 14px;
+        margin-top: 25px;
+      }
+    }
+  }
+  .section-content{
+    padding: 0;
+    font-size: $text-md;
+    color: $dove-gray;
+  }
+}

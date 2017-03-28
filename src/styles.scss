@@ -1,1 +1,59 @@
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import 'styles/_base_variables';
+@import 'styles/twemoji-awesome';
+//@import '~normalize.css/normalize';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import '~bootstrap-material-design/sass/bootstrap-material-design';
+@import '~bootstrap-material-design/sass/ripples';
+@import 'styles/_theme_variables';
+@import 'styles/_theme-mixins-variables';
+@import 'styles/iconfont';
+@import 'styles/bootstrap-override';
+@import 'styles/mixins';
+@import 'styles/common';
+@import 'styles/parts/header';
+@import 'styles/parts/footer';
+@import 'styles/parts/section';
+@import 'styles/parts/contract';
+@import 'styles/parts/insurance-level';
+@import 'styles/parts/inventory';
+@import 'styles/parts/block-cover';
+@import 'styles/parts/timeline';
+@import 'styles/parts/percentage';
+@import 'styles/parts/product';
+@import 'styles/parts/faq';
+@import 'styles/parts/icon-desc';
+@import 'styles/parts/bubble-chat';
+@import 'styles/parts/icon-text';
+@import 'styles/parts/object';
+@import 'styles/parts/anim';
+@import 'styles/counter';
+//@import '~fancybox/dist/css/jquery.fancybox';
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Work+Sans:300,400,500,600,700|Raleway:300');
+//@import 'fonts/fonts.css';
+
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+$primary: mat-palette($mat-light-blue, 600, A100, A400);
+$accent: mat-palette($mat-light-blue, 600, A100, A400);
+$warn: mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+.habitation {
+    .mat-slider-horizontal {
+        width: 100%;
+    }
+    .habitation-rooms {
+        margin-top: 20px;
+    }
+    .habitation-value {
+        margin-top: 40px;
+        .mat-slider-thumb-label {
+            width: 50px;
+            height: 50px;
+            top: -60px;
+        }
+    }
+
+}

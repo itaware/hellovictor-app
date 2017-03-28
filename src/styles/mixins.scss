@@ -1,0 +1,110 @@
+@mixin dash($color: $dash-default-color, $margin: $dash-default-margin, $width: $dash-default-width, $height: $dash-default-height){
+    display:block;
+    width: $width;
+    height: $height;
+    @include dash-color($color);
+    @include dash-margin($margin);
+}
+@mixin dash-color($color){
+    background: $color;
+}
+@mixin dash-margin($margin){
+    margin: $margin;
+}
+
+.dash{
+  @include dash();
+  transform: scaleX(0);
+  transition: transform 1s;
+  transform-origin: left;
+  &.dash-center{
+    margin-left: auto;
+    margin-right: auto;
+    transform-origin: center;
+  }
+  &.anim{
+    transform: scaleX(1);
+  }
+}
+
+@mixin cover(){
+  position:relative;
+  .cover{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    &.cover-top{
+      img:not(.img-fit-cover){
+        top: 0;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    img:not(.img-fit-cover){
+      position: absolute;
+      min-height: 100%;
+      min-width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img.img-fit-cover{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: 'object-fit: cover;'
+    }
+  }
+  .cover-content{
+    position: relative;
+    z-index: 10;
+  }
+}
+.container-cover{
+  @include cover();
+}
+@mixin valign($pos: 'middle'){
+  font-size: 0;
+  > * {
+    display:inline-block;
+    float:none;
+    font-size: initial;
+    @if($pos == 'middle'){
+      vertical-align: middle;
+    }
+  }
+}
+.valign-middle{
+  @include valign('middle');
+}
+
+@mixin block-valign(){
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  @include clearfix;
+}
+@mixin block-valign-pos($align: 'middle'){
+  @if($align == 'middle'){
+    transform: translateY(-50%);
+  }
+}
+@media(min-width: $screen-sm-max){
+
+  .block-valign-container{
+    position: relative;
+  }
+  .block-valign{
+    @include block-valign();
+    &.middle{
+      @include block-valign-pos('middle');
+    }
+  }
+}
+.block-valign{
+  text-align: center;
+}
