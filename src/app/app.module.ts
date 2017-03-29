@@ -22,7 +22,7 @@ import { ValuableItemPageComponent } from './product/valuable-item-page/valuable
 import { HabitationPageComponent } from './product/habitation-page/habitation-page.component';
 import { QuoteService } from "./quote/quote.service";
 import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
-import { ProductComponent } from './product/product.component';
+import { ProductComponent, VideoDialogComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,11 @@ import { ProductComponent } from './product/product.component';
     ValuableItemPageComponent,
     HabitationPageComponent,
     HabitationGuaranteesComponent,
-    ProductComponent
+    ProductComponent,
+    VideoDialogComponent
+  ],
+  entryComponents: [
+    VideoDialogComponent
   ],
   imports: [
     BrowserModule,

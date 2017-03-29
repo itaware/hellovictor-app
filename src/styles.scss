@@ -92,6 +92,11 @@ body:not(.home){
 
 }
 
+md-dialog-container.mat-dialog-container {
+    padding: 0;
+    max-width: 100%;
+}
+
 // Styling on warning for users on IE7 or below
 .browsehappy {
   text-align: center;
