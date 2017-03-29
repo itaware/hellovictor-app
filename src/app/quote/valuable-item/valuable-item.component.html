@@ -102,13 +102,17 @@
           </div>
           <div class="container-fluid padding-vertical">
             <div class="row">
-              <div class="col-xs-5">
+              <div class="col-xs-4">
                 <p class="text-sm">Vétusté</p>
                 <div class="text-lg"><span class=" text-danger">- {{quoteService.valuableItem.depreciation | number:'1.2-2'}}</span> €</div>
               </div>
-              <div class="col-xs-5">
+              <div class="col-xs-4">
                 <p class="text-sm">Valeur estimée</p>
                 <div class="text-lg"><span class="text-success text-semibold">{{quoteService.valuableItem.value | number:'1.2-2'}}</span>€</div>
+              </div>
+              <div class="col-xs-4">
+                <p class="text-sm">Franchise</p>
+                <div class="text-lg"><span class="text-success text-semibold">{{quoteService.valuableItem.deductible | number:'1.2-2'}}</span>€</div>
               </div>
             </div>
           </div>
@@ -135,58 +139,6 @@
                     <md-slide-toggle [(ngModel)]="quoteService.valuableItem.insuranceOptions.theft.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
                       <div class="text-xs text-semibold">-{{quoteService.valuableItem.insuranceOptions.theft.cost | currency:'EUR':true:'1.2-2'}}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list-group-item">
-              <div class="row flex-item">
-                <div class="row-content-left">
-                  <div class="row-action-primary">
-                    <div class="text-icon-xl text-info">
-                      <i class="material-icons no-raised">flash_on</i>
-                    </div>
-                  </div>
-                  <div class="row-content">
-                    <div class="list-group-item-heading text-semibold">Protection contre les courts-circuits</div>
-                    <div class="list-group-item-text">
-                      Un dommage causé par une surtension ou par un courts-circuit, par exemple, quand la foudre a provoqué une augmentation de
-                      la tension dans le réseau électrique - pendant que l'appareil est en charge.
-                    </div>
-                  </div>
-                </div>
-                <div class="row-content-right">
-                  <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.valuableItem.insuranceOptions.breakdown.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
-                    <div class="togglebutton">
-                      <div class="text-xs text-semibold">-{{quoteService.valuableItem.insuranceOptions.breakdown.cost | currency:'EUR':true:'1.2-2'}}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="list-group-item">
-              <div class="row flex-item">
-                <div class="row-content-left">
-                  <div class="row-action-primary">
-                    <div class="text-large text-info">
-                      <img src="/assets/images/picto/water.svg" alt="Goutte" class="img-responsive" />
-                    </div>
-                  </div>
-                  <div class="row-content">
-                    <div class="list-group-item-heading text-semibold">Protection contre les courts-circuits</div>
-                    <div class="list-group-item-text">
-                      En contact avec un liquide, que ce soit en renversant une boisson ou en le faisant tomber dans les toilettes. Par la suite,
-                      l'appareil portable ne fonctionne plus.
-                    </div>
-                  </div>
-                </div>
-                <div class="row-content-right">
-                  <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.valuableItem.insuranceOptions.failure.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
-                    <div class="togglebutton">
-                      <div class="text-xs text-semibold">-{{quoteService.valuableItem.insuranceOptions.breakdown.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>

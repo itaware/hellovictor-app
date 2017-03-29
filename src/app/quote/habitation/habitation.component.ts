@@ -11,6 +11,9 @@ export class HabitationComponent implements OnInit {
   constructor(private quoteService: QuoteService) { }
 
   ngOnInit() {
+    if (!this.quoteService.habitationType) {
+      this.quoteService.habitationType = 'renter';
+    }
     this.quoteService.calculAmount();
   }
 

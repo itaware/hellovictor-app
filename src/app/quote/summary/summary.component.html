@@ -18,14 +18,14 @@
       <div class="col-md-8">
         <div class="row">
           <div class="list-group">
-            <div class="list-group-item" *ngIf="quoteService.habitationPremium > 0">
+            <div class="list-group-item" *ngIf="quoteService.habitationType">
               <div class="row">
                 <div class="flex-item">
                   <div class="row-content-left">
                     <div class="row-picture">
-                      <div class="btn btn-fab btn-info text-lg">
+                      <button routerLink="/quote/habitation" class="btn btn-fab btn-info text-lg">
                         <img src="/assets/images/picto/maison.svg" alt="Maison" />
-                      </div>
+                      </button>
                     </div>
                     <div class="row-content">
                       <div class="text-lg text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.roomsNumber}} pièces</strong> dont la valeur mobilère est de <strong>{{quoteService.habitationValue | number:'1.0-2'}}</strong>                        €</div>
@@ -43,10 +43,9 @@
                 <div class="flex-item">
                   <div class="row-content-left">
                     <div class="row-picture">
-                      <img src="/assets/images/form/macbook.jpg" alt="Macbook" class="img-responsive center-block" />
-                      <div class="pull-right">
-                        <span class="text-lg material-icons">photo_camera</span>
-                      </div>
+                      <button class="btn btn-fab btn-info text-lg" (click)="getValuableItem(vi)">
+                        <img src="/assets/images/product-type/smartphone.svg" alt="smartphone" />
+                      </button>
                     </div>
                     <div class="row-content">
                       <div class="text-lg text-semibold">{{vi.name}}</div>
@@ -72,19 +71,51 @@
               <div class="row flex-item">
                 <div class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
-                    <strong>Un autre objet</strong>
+                    <strong>Un objet numérique</strong>
                   </div>
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/valuable-item">
-                      <img src="/assets/images/product-type/smartphone.svg" alt="smartphone" />
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/product-type/smartphone.svg" alt="phone" />
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="list-group-item" *ngIf="quoteService.habitationPremium === 0">
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Un objet de loisir</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/picto/velo.svg" alt="Vélo" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row flex-item">
+                <div class="row-content-left">
+                  <div class="row-content text-lg col-xs-12">
+                    <strong>Un objet précieux</strong>
+                  </div>
+                </div>
+                <div class="row-content-right no-border">
+                  <div class="row-picture">
+                    <button routerLink="/quote/valuable-items" class="btn btn-fab btn-info text-lg">
+                      <img src="/assets/images/picto/montre.svg" alt="Montre" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item" *ngIf="!quoteService.habitationType">
               <div class="row flex-item">
                 <div class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
@@ -127,7 +158,7 @@
           <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block">
             Je valide
           </a>
-          <a routerLink="/home" class="center-block">Non merci, ça ne m'intéresse pas</a>
+          <a routerLink="/home" class="center-block text-center">Non merci, ça ne m'intéresse pas</a>
         </div>
       </div>
 

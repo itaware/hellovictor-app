@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteService } from "../quote.service";
 
 @Component({
   selector: 'hv-subscribtion',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubscribtionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private quoteService: QuoteService) { }
 
   ngOnInit() {
   }

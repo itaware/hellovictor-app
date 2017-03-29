@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from "../quote.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'hv-summary',
@@ -8,9 +9,13 @@ import { QuoteService } from "../quote.service";
 })
 export class SummaryComponent implements OnInit {
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private router: Router, private quoteService: QuoteService) { }
 
   ngOnInit() {
   }
 
+  getValuableItem(vi) {
+    this.quoteService.valuableItem = vi;
+    this.router.navigate(['/quote/valuable-item'])
+  }
 }

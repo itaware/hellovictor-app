@@ -21,24 +21,25 @@
       <div class="col-md-8">
         <div class="row">
           <div class="group-container">
-            <div class="form-group form-group-info form-group-md label-placeholder">
-              <input class="form-control text-lg text-info" type="text" placeholder="Adresse e-mail" />
-            </div>
-            <div class="form-group form-group-info form-group-md ">
-              <input class="form-control text-lg text-info" type="text" placeholder="Nom" />
-            </div>
-            <div class="form-group form-group-info form-group-md ">
-              <input class="form-control text-lg text-info" type="text" placeholder="Prénom" />
-            </div>
-            <div class="form-group form-group-info form-group-md ">
-              <input class="form-control text-lg text-info" type="text" placeholder="Téléphone" />
-            </div>
+            <md-input-container class="text-lg full-width">
+              <input mdInput placeholder="Adresse e-mail" [(ngModel)]="quoteService.contact.email">
+            </md-input-container>
+            <md-input-container class="text-lg full-width">
+              <input mdInput placeholder="Nom" [(ngModel)]="quoteService.contact.lastName">
+            </md-input-container>
+            <md-input-container class="text-lg full-width">
+              <input mdInput placeholder="Prénom" [(ngModel)]="quoteService.contact.firstName">
+            </md-input-container>
+            <md-input-container class="text-lg full-width">
+              <input mdInput placeholder="Téléphone" [(ngModel)]="quoteService.valuableItem.purchaseAmount">
+            </md-input-container>
           </div>
         </div>
         <div class="form-group text-center">
-          <button href="#" class="btn btn-lg btn-raised btn-primary">
+          <button (click)="validQuote()" class="btn btn-lg btn-raised btn-primary">
             Envoyer ma demande
           </button>
+          <a routerLink="/home" class="center-block text-center">Non finalement ça m'intéresse pas</a>
         </div>
       </div>
 
