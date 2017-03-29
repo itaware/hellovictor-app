@@ -3,8 +3,6 @@
   flex-wrap: wrap;
 }
 .step-item{
-
-
   margin: 30px 0;
   &-number{
   }
@@ -31,5 +29,8 @@
   text-align: center;
   &.bubble-step{
     background-image: url(/assets/images/bulle-step.svg);
+  }
+  &.bubble-etc{
+    line-height: 40px;
   }
 }

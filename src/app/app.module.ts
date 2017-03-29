@@ -11,17 +11,18 @@ import { QuoteComponent } from './quote/quote.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HabitationComponent } from './quote/habitation/habitation.component';
 import { HabitationAddOnComponent } from './quote/habitation-add-on/habitation-add-on.component';
-import { HabitationSummaryComponent } from './quote/habitation-summary/habitation-summary.component';
+import { SummaryComponent } from './quote/summary/summary.component';
 import { SubscribtionComponent } from './quote/subscribtion/subscribtion.component';
 import { ValuableItemComponent } from './quote/valuable-item/valuable-item.component';
 import { ValuableItemsComponent } from './quote/valuable-items/valuable-items.component';
 import { ValuableItemGuaranteesComponent } from './quote/valuable-item-guarantees/valuable-item-guarantees.component';
 import { ValuableItemsSummaryComponent } from './quote/valuable-items-summary/valuable-items-summary.component';
 import { HomeComponent } from './home/home.component';
-import { ValuableItemPageComponent } from './home/valuable-item-page/valuable-item-page.component';
-import { HabitationPageComponent } from './home/habitation-page/habitation-page.component';
+import { ValuableItemPageComponent } from './product/valuable-item-page/valuable-item-page.component';
+import { HabitationPageComponent } from './product/habitation-page/habitation-page.component';
 import { QuoteService } from "./quote/quote.service";
 import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/hab
     QuoteComponent,
     HabitationComponent,
     HabitationAddOnComponent,
-    HabitationSummaryComponent,
+    SummaryComponent,
     SubscribtionComponent,
     ValuableItemComponent,
     ValuableItemsComponent,
@@ -38,7 +39,8 @@ import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/hab
     HomeComponent,
     ValuableItemPageComponent,
     HabitationPageComponent,
-    HabitationGuaranteesComponent
+    HabitationGuaranteesComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

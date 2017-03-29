@@ -1,0 +1,305 @@
+<div class="main-content product-page product-{{page}}">
+  <header class="header-site text-center bg-parallax">
+    <div class="header-site-inner">
+      <div class="header-site-top">
+        <div class="logo animated bounceIn">
+          <a routerLink="/home" id="back-home-habitation-header"><img src="{{baseUrl}}images/logo-hello-victor-white.svg" alt="Hello victor" class="img-responsive center-block"
+            /></a>
+        </div>
+      </div>
+      <div class="header-site-bottom">
+        <div class="slogan block-anim text-zoom">{{slogan}}</div>
+        <div>
+          <a class="link-video fancybox fancybox.iframe" href="https://www.youtube.com/embed/YmbaM0gYACc?autoplay=1" id="video-{{page}}">
+            <span class="glyphicon glyphicon-play"></span>
+            <span class="center-block video-text">Voir la vidéo</span>
+          </a>
+        </div>
+        <a class="btn-down" href="#detail">
+          <span class="glyphicon glyphicon-menu-down"></span>
+        </a>
+      </div>
+    </div>
+  </header>
+  <div id="detail" class="content-top text-center" data-print="true" id="offre-block">
+    <h1 class="page-title">Assurez à la demande ce que vous voulez,<br/> quand vous voulez<span class="subtitle text-lowercase">et ce entièrement depuis votre mobile <img src="/assets/images/mobile.png" style="height: 30px"></span></h1>
+    <div class="container list-icon-text">
+      <div [class.active]="page === 'objets'" class="icon-text-item col-xs-6 col-sm-4">
+        <a routerLink="/product/valuable-item" fragment="content" id="objets-click-head-button">
+          <div class="img"><img src="/assets/images/picto/objets.svg" alt="Objects courants" class="img-responsive center-block" /></div>
+          <div class="list-text">
+            Objets
+            <div class="glyphicon glyphicon-menu-down" *ngIf="page === 'objets'"></div>
+          </div>
+        </a>
+      </div>
+      <div [class.active]="page === 'habitation'" class="icon-text-item col-xs-6 col-sm-4">
+        <a routerLink="/product/habitation" fragment="content" id="habitation-click-head-button">
+          <div class="img col-xs-8 col-sm-12">
+            <div class="center-block"><img src="/assets/images/picto/maison.svg" alt="Habitation" class="img-responsive center-block" /></div>
+          </div>
+          <div class="list-text">
+            Habitation
+            <div class="glyphicon glyphicon-menu-down" *ngIf="page === 'habitation'"></div>
+          </div>
+        </a>
+      </div>
+      <div [class.active]="page === 'sante'" class="icon-text-item col-xs-6 col-sm-4">
+        <a href="#" id="sante-click-head-button" disabled>
+          <div class="img col-xs-8 col-sm-12">
+            <img src="/assets/images/picto/coeur.svg" alt="Santé" class="img-responsive center-block" />
+          </div>
+          <div class="list-text">
+            Santé
+          </div>
+          <div class="sticker-waiting">Bientôt disponible</div>
+          <div class="glyphicon glyphicon-menu-down" *ngIf="page === 'sante'"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="section section-gray section-hello">
+    <div class="container">
+      <div class="row valign-middle">
+        <div class="col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
+          <p>
+            <img src="/assets/images/hello.svg" alt="Hello" class="img-responsive center-block " />
+            <br/>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-7" data-print="true" id="a-propos">
+          <div class="section-header">
+            <h2 class="section-title">
+              &Agrave; propos de nous
+            </h2>
+            <div class="dash"></div>
+          </div>
+          <div class="section-text">
+            <p>Ce qui nous distingue.<br/> Nous sommes perfectionnistes, passionnés, novateurs. <br/> Déterminé à réinventer
+              l'Assurance. <br/> Parce que le monde a changé, le modèle traditionnel doit s'adapter aux nouvelles réalités.<br/>C’est
+              pourquoi, pour vous, nous avons créé Hello Victor l’assurance 100% numérique. <br/> Assurez-vous en quelques
+              minutes au juste prix correspondant précisément à vos besoins.</p>
+          </div>
+        </div>
+      </div>
+      <div class="link-bottom text-center">
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <section class="block-cover block-cover-no-xs">
+    <header class="block-cover-header text-center">
+      <h2 class="block-cover-title">Faire l'inventaire de ses objets n'a <strong>jamais été aussi simple</strong></h2>
+      <div class="container">
+        <p class="text-md">
+          <span class="text-semibold">Le saviez-vous ? <span class="text-extrabold">43% des assurés sont mal ou pas remboursés</span>
+          du fait qu’ils n'ont pas pu transmettre les factures à leur assurance. </span>
+          <br/>Avec Hello Victor vous pouvez désormais de manière simple et rapide transmettre et sauvegarder vos factures
+          objet par objet en les photographiant ou en les téléchargeant.
+        </p>
+      </div>
+    </header>
+    <div class="container-fluid text-white block-cover-content block-inventaire">
+      <div class="cover cover-parallax">
+        <img src="{{baseUrl}}images/product/objets/app-mobile.jpg" />
+      </div>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-6 col-lg-5 col-lg-offset-7">
+        <h3 class="block-cover-content-title">Une application mobile de reconnaissance d'objets</h3>
+        <div class="block-cover-content-desc text-md">Photographiez tous vos biens, enregistrez vos factures, paramétrez chacun de vos biens avec le niveau de couverture
+          adaptée. Chaque bien est automatiquement valorisé et le calcul de vétusté nous perment de reévaluer annuellement
+          votre prime à la baisse.</div>
+        <hr class="visible-xs" />
+        <div class="steps pop-bubble">
+          <div class="step-item col-xs-6 col-sm-6">
+            <div class="bubble-item bubble-step step-item-number">1</div>
+            <div class="step-item-preview col-xs-4">
+              <img src="/assets/images/step/phone-1.png" alt="étape 1" class="img-responsive">
+            </div>
+            <div class="step-item-text col-xs-8">
+              Lancer l'application Hello Victor sur votre smartphone
+            </div>
+          </div>
+          <div class="step-item col-xs-6 col-sm-6">
+            <div class="bubble-item bubble-step step-item-number">2</div>
+            <div class="step-item-preview col-xs-4">
+              <img src="/assets/images/step/phone-2.png" alt="étape 2" class="img-responsive">
+            </div>
+            <div class="step-item-text col-xs-8">
+              Cadrez l'objet à ajouter à votre inventaire
+            </div>
+          </div>
+          <div class="step-item col-xs-6 col-sm-6">
+            <div class="bubble-item bubble-step step-item-number">3</div>
+            <div class="step-item-preview col-xs-4">
+              <img src="/assets/images/step/phone-3.png" alt="étape 3" class="img-responsive">
+            </div>
+            <div class="step-item-text col-xs-8">
+              L'application reconnait l'objet vous avez juste à valider
+            </div>
+          </div>
+          <div class="step-item col-xs-6 col-sm-6">
+            <div class="bubble-item bubble-step step-item-number">4</div>
+            <div class="step-item-preview col-xs-4">
+              <img src="/assets/images/step/phone-4.png" alt="étape 4" class="img-responsive">
+            </div>
+            <div class="step-item-text col-xs-8">
+              Ajouter la facture <strong>et voila ! </strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link-bottom">
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </div>
+    </div>
+    <div class="block-valign-container block-declaration block-cover-content section-content">
+      <div class="container">
+        <div class="row">
+          <div class="cover cover-top">
+            <img src="{{baseUrl}}images/product/objets/chat-{{page}}.jpg" />
+          </div>
+          <div class="col-xs-12 text-center">
+            <h3 class="block-cover-content-title">Faites-vous rembourser <strong>rapidement</strong></h3>
+            <div class="block-cover-content-subtitle text-semibold">
+              <p>Déclarez votre sinistre en ligne à Victoria, disponible 24h/24 7j/7 via votre messagerie préférée (Messenger,
+                WhatsApp, Kik, ...) et soyez remboursé de suite.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block-valign middle " data-print="true" id="declaration-chat-{{page}}">
+        <hr class="visible-xs" />
+        <div class="center-block-xs col-sm-5">
+          <div class="text-lg"><strong>Déclaration d'un sinistre</strong></div>
+          <div class="text-md">Par messagerie en <strong>moins de 2 mn</strong></div>
+          <div class="clearfix">
+            <div class="bubble-chat block-anim">
+              <div class="bubble-chat-container">
+                <div class="bubble-chat-item">
+                  <img src="{{baseUrl}}images/hello-victor-color.svg" alt="Hello Victor" class="zoom-full img-responsive center-block" />                  compatible avec
+                </div>
+              </div>
+              <div class="bubble-chat-container">
+                <div class=" bubble-chat-item">
+                  <div class="container-fluid social-icon pop-item">
+                    <img src="{{baseUrl}}images/social/kik.svg" alt="kik" />
+                    <img src="{{baseUrl}}images/social/line.svg" alt="line" />
+                    <img src="{{baseUrl}}images/social/imessage.svg" alt="imessage" />
+                    <img src="{{baseUrl}}images/social/whatsapp.svg" alt="whatsapp" />
+                    <img src="{{baseUrl}}images/social/messenger.svg" alt="messenger" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link-bottom">
+        <span class="glyphicon glyphicon-menu-down"></span>
+      </div>
+    </div>
+  </section>
+  <section class="section alert alert-info ">
+    <div class="container" data-print="true" id="declaration-paiement-{{page}}">
+      <div class="row align-items middle">
+        <div class="align-item  col-xs-12 col-sm-6 col-md-4">
+          <div class="text-lg">En cas de sinistre</div>
+          <div class="text-lg"><strong>Hello victor vous <br/>rembourse rapidement !</strong></div>
+        </div>
+        <div class="scrollme align-item col-xs-12 col-sm-6 col-md-4 clearfix no-padding declaration-step-content">
+          <img class="animateme sticker" src="{{baseUrl}}/images/billet.png" alt="billet" data-when="enter" data-from="0" data-to="1"
+            data-translatex="-40" />
+          <div class="animateme col-xs-6 col-xs-offset-1 no-padding element-1 element-overlap" data-when="enter" data-from="1" data-to="0"
+            data-translatey="300">
+            <img src="/assets/images/declaration/smartphone-top.png" alt="Validation" class="img-responsive animateme" />
+          </div>
+          <div class="animateme col-xs-6 no-padding element-2 element-overlap" data-when="enter" data-from="1" data-to="0" data-translatey="500">
+            <img src="/assets/images/declaration/smartphone-2.svg" alt="Paiement" class="img-responsive" />
+          </div>
+        </div>
+        <div class="align-item col-xs-12 col-md-4 process">
+          <div class="bubble-item bubble-etc">...</div>
+          <ul class="list-instructions block-anim">
+            <li>
+              <div class="check"><i class="icon icon-check"></i></div>
+              Déclarez par chat ce qu'on vous a volé ou ce qui est déterioré.
+            </li>
+            <li>
+              <div class="check"><i class="icon icon-check"></i></div>
+              Validez et envoyez votre déclaration...
+            </li>
+            <li>
+              <div class="check"><i class="icon icon-check"></i></div>
+              Vous êtes remboursé immédiatement et sans délais.
+            </li>
+            <li>
+              <div class="check"><i class="icon icon-check"></i></div>
+              <div class="text-bold">C'est terminé !</div>
+              Vous avez la tête disponible pour d'autres choses...
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center">
+        <a (click)="goToQuote()" class="btn btn-raised btn-default btn-lg btn-raised" id="declaration_sinistre-{{page}}">En savoir plus</a>
+      </div>
+      <div class="link-bottom text-center">
+        <div class="glyphicon glyphicon-menu-down"></div>
+      </div>
+    </div>
+  </section>
+  <div class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title text-center text-semibold">Notre démarche</h2>
+        <div class="dash dash-center"></div>
+      </div>
+      <div class="section-content" data-print="true" id="demarche-objets">
+        <p>Hello Victor vous propose des couvertures adaptées pour le vol et vandalisme, la casse et les dégradations chez vous
+          et en dehors, et même des extensions de garanties en cas de panne.
+        </p>
+        <p>
+          Si vous êtes soigneux et attentionné ou que simplement vous êtes né sous une bonne étoile alors vous payez moins cher. Hello
+          Victor est la première assurance à proposer un bonus / malus pour vos objets. Ne payez plus plein tarif toute votre
+          vie sans avoir jamais eu de sinistre. Vous êtes responsable de la protection de vos objets : <span class="text-semibold">soyez récompensé !</span>
+        </p>
+        <span class="text-semibold">Une gestion souple et claire de votre assurance</span> : ajouter ou supprimer des objets
+        quand vous le souhaitez, votre prime sera recalculée instantanément.
+        <br><br> En plus et grâce à l’algorithme d’intelligence artificielle d’Hello Victor nous devenons la première assurance
+        à adapter dynamiquement votre prime mensuelle pour être toujours au plus juste. Nous prenons en compte votre usage
+        ainsi que la vétusté objets par objets. Par exemple votre iPhone 6s acheté fin 2015 pour une valeur de 659€ ne vaut
+        en réalité aujourd’hui que 290€. Votre prime sera basée sur la valeur actuelle et non la valeur à neuf.
+        <br><br>
+      </div>
+    </div>
+  </div>
+  <section class="section section-gray" id="share-{{page}}">
+    <header class="section-header text-center">
+      <h2 class="section-title">
+        <img src="/assets/images/happy.svg" alt="" style="height: 20px;">
+        <br> Parlez-en avec vos amis
+      </h2>
+    </header>
+    <div class="block-share">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://goo.gl/SPLfiU" target="_blank" id="partage_facebook">
+        <img src="/assets/images/facebook.svg" alt="" style="height: 30px">
+      </a>
+      <a href="https://twitter.com/intent/tweet/?url=https://goo.gl/jOlqSX&text=Hello%20Victor%2C%20une%20assurance%20en%20ligne%20qui%20couvre%20tous%20vos%20biens%20%23insurtech"
+        target="_blank" id="partage_twitter">
+        <img src="/assets/images/twitter.svg" alt="" style="height: 30px">
+      </a>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://goo.gl/4gy7Wc&title=L'assurance 100% ligne&summary=Une assurance 100% en ligne qui couvre tous vos biens, incluant une app mobile d'inventaire et qui rembourse rapidement"
+        id="partage_linkedin" target="_blank">
+        <img src="/assets/images/linkedin.svg" alt="" style="height: 30px">
+      </a>
+      <a href="https://plus.google.com/share?url=https://goo.gl/ZixcFo&hl=fr" target="_blank" id="partage_gplus">
+        <img src="/assets/images/google+.svg" alt="" style="height: 30px">
+      </a>
+      <a href="mailto:?subject=Hello%20Victor%2C%20une%20assurance%20100%25%20en%20ligne%20qui%20couvre%20tous%20vos%20biens&body=Bonjour%2C%0A%0AHello%20Victor%20http%3A%2F%2Fhellovictor.fr%20est%20une%20assurance%20100%25%20en%20ligne%20qui%20couvre%20tous%20vos%20biens%2C%20vous%20permet%20de%20faire%20votre%20inventaire%20via%20une%20app%20mobile%20et%20qui%20rembourse%20rapidement%0A"
+        target="_blank" id="partage_mail">
+        <img src="/assets/images/email.svg" alt="" style="height: 30px">
+      </a>
+    </div>
+  </section>
+</div>

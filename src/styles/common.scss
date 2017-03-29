@@ -23,10 +23,7 @@
   }
 }
 .link-bottom{
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
+  padding: 10px 0;
   color: #fff;
   text-align: center;
   a{
@@ -35,6 +32,12 @@
   transition: all 0.3s;
   &:hover{
     transform: translateY(10%);
+  }
+  @media(min-width: $screen-sm-min){
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
   }
 }
 .no-padding{
@@ -150,16 +153,22 @@ $max-element : 4;
 @media(min-width: $screen-sm-min){
   .alternate-item{
     .row{
-      display:table;
-      font-size: 0;
+      display:flex;
+      //flex-wrap: wrap; // mauvais affichage sous safari
       > div{
-        display: table-cell;
-        float:none;
-        font-size: initial;
+        justify-content: center;
+        align-items: center;
+        display: flex;
         direction: ltr;
         vertical-align: middle;
         &.valign-top{
           vertical-align: top;
+        }
+        &.block-text{
+          .block-inner{
+            width: 100%;
+            flex-direction: column;
+          }
         }
       }
       @media(min-width: $screen-sm-min){
@@ -172,6 +181,30 @@ $max-element : 4;
       }
     }
   }
+  // .alternate-item{
+  //   .row{
+  //     display:table;
+  //     font-size: 0;
+  //     > div{
+  //       display: table-cell;
+  //       float:none;
+  //       font-size: initial;
+  //       direction: ltr;
+  //       vertical-align: middle;
+  //       &.valign-top{
+  //         vertical-align: top;
+  //       }
+  //     }
+  //     @media(min-width: $screen-sm-min){
+  //       &:nth-child(even){
+  //         direction: rtl;
+  //       }
+  //     }
+  //     +.row{
+  //       border-top: 1px solid #eee;
+  //     }
+  //   }
+  // }
 }
 
 .block-text{

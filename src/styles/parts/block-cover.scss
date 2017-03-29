@@ -1,12 +1,19 @@
 .block-cover{
   padding: 0;
+  &-header{
+    padding: 30px 0;
+    p{
+      line-height: 1.5;
+      padding-bottom: 15px;
+    }
+  }
   &-title{
     margin: 0;
     padding: 20px 15px;
   }
   &-content{
     padding: 0;
-    min-height: 100vh;
+
     background: no-repeat center center;
     background-size: cover;
     &-inner{
@@ -26,7 +33,11 @@
   @media(min-width: $screen-sm-min){
     &-content{
       position: relative;
-      padding: 15px 40px;
+      min-height: 100vh;
+      
+      > .container {
+        padding: 15px 40px;
+      }
       &-title{font-size: 30px;}
       &-subtitle{font-size: 20px;}
     }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from "../quote.service";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'hv-valuable-item',
@@ -8,15 +8,26 @@ import { Router } from "@angular/router";
   styleUrls: ['./valuable-item.component.scss']
 })
 export class ValuableItemComponent implements OnInit {
+  isDirect: boolean;
 
-  constructor(private router: Router, private quoteService: QuoteService) { }
+  constructor(private router: Router, private route: ActivatedRoute, private quoteService: QuoteService) {
+  }
 
   ngOnInit() {
+    this.isDirect = this.route.snapshot.data.direct;
   }
 
   validate() {
     this.quoteService.addValuableItem();
-    this.router.navigate(['/quote/habitation-summary']);
+    this.router.navigate(['/quote/summary']);
+  }
+
+  goBack() {
+    if (this.isDirect) {
+      this.router.navigate(['/product/valuable-item']);
+    } else {
+      this.router.navigate(['/quote/summary'])
+    }
   }
 
 }

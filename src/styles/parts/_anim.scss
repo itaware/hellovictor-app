@@ -21,6 +21,9 @@
      clip-path: circle(0 at center);
      transition: clip-path 4s;
     }
+    @media(max-width: $screen-xs-max){
+      margin-bottom: 50px;
+    }
   }
   &.anim{
     .discover-inner{
@@ -38,6 +41,7 @@
       transform: scale(1);
     }
   }
+  &.pop-item,
   .pop-item{
     > * {
       transform: scale(0);
@@ -47,10 +51,30 @@
       }
     }
   }
-
-
+  &.fade-item,
+  .fade-item{
+    > * {
+    opacity: 0;
+      transition: all 1.5s;
+      &.anim{
+        opacity: 1;
+      }
+    }
+  }
 }
 
+.pop-bubble{
+  .bubble-item{
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  .anim{
+    .bubble-item{
+      transition: all 4s;
+      opacity: 1;
+    }
+  }
+}
 
 .cover-parallax{
   .cover-inner{

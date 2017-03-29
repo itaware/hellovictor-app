@@ -107,7 +107,7 @@
       font-size: 14px;
     }
   }
-  &.product-objects{
+  &.product-objets{
     .header-site{
       background-image: url(/assets/images/product/objets/objets.jpg);
     }
@@ -189,9 +189,15 @@
   }
 }
 @media(min-width: $screen-sm-min){
-  .product-item{
-    &.alternate-item{
-      .row > div{height: 550px;}
+
+    .alternate-item{
+      .row.product-item {
+        > div {
+          // min-height: 550px;
+          // height: 100%;
+        }
+        
+      }
       .cover{
         img{
           top:0;
@@ -199,5 +205,5 @@
         }
       }
     }
-  }
+
 }
