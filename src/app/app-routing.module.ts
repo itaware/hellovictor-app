@@ -15,6 +15,7 @@ import { ValuableItemPageComponent } from "./product/valuable-item-page/valuable
 import { HabitationPageComponent } from "./product/habitation-page/habitation-page.component";
 import { HabitationGuaranteesComponent } from "./quote/habitation-guarantees/habitation-guarantees.component";
 import { ProductComponent } from "./product/product.component";
+import { FinishComponent } from "./quote/finish/finish.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -32,11 +33,11 @@ const routes: Routes = [
   {path: 'quote/habitation-add-on', component: HabitationAddOnComponent},
   {path: 'quote/summary', component: SummaryComponent},
   {path: 'quote/subscribtion', component: SubscribtionComponent},
-  {path: 'quote/valuable-item', component: ValuableItemComponent},
-  {path: 'quote/valuable-item-direct', component: ValuableItemComponent, data : { direct: true }},
-  {path: 'quote/valuable-item-guarantees', component: ValuableItemGuaranteesComponent},
-  {path: 'quote/valuable-items', component: ValuableItemsComponent},
-  {path: 'quote/valuable-items-summary', component: ValuableItemsSummaryComponent},
+  {path: 'quote/valuable-item/:origin', component: ValuableItemComponent},
+  {path: 'quote/valuable-item-guarantees/:origin', component: ValuableItemGuaranteesComponent},
+  //{path: 'quote/valuable-items', component: ValuableItemsComponent},
+  //{path: 'quote/valuable-items-summary', component: ValuableItemsSummaryComponent},
+  {path: 'quote/finish', component: FinishComponent},
 ];
 
 @NgModule({

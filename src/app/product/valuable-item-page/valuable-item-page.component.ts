@@ -22,7 +22,7 @@ export class ValuableItemPageComponent implements OnInit {
     } else if (type === 'hobby') {
     } else if (type === 'precious') {
     }
-    this.router.navigate(['quote', 'valuable-item-direct']);
+    this.router.navigate(['quote', 'valuable-item', 'objets']);
   }
 
 }

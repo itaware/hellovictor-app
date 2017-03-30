@@ -25,30 +25,15 @@
         <div class="row">
           <div class="group-container">
             <div class="form-group form-group-md">
-              <div class="col-xs-7">
-                <div class="row">
-                  <md-input-container class="text-lg">
-                    <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
-                  </md-input-container>
-                </div>
-              </div>
-              <div class="col-xs-4 col-xs-offset-1">
-                <div class="row">
-                  <div class="object-preview">
-                    <img src="/assets/images/form/macbook.jpg" alt="Macbook" class="img-responsive center-block" />
-                    <div class="pull-right">
-                      <span class="text-lg material-icons">photo_camera</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <md-input-container class="text-lg">
+                <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
+              </md-input-container>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="group-container form-group">
             <p class="text-lg">La valeur de votre appareil</p>
-            <div class="text-md"><strong>En indiquand le montant et la date d'achat</strong></div>
           </div>
           <div class="group-container form-group form-group-md">
             <div class="row col-xs-9">
@@ -63,48 +48,19 @@
               <div class="form-control-infos"><span class="text-lg icon icon-calendar"></span></div>
               <label>Date de l'achat</label>
               <md-input-container class="text-lg" floatPlaceholder="never">
-                <input mdInput placeholder="JJ/MM/AAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="quoteService.calculAmount()">
+                <input mdInput placeholder="JJMMAAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="format()" (focus)="unformat()" [value]="purchaseDate">
               </md-input-container>
             </div>
           </div>
-          <div class="group-container form-group dropdown-title container-fluid text-md text-bold">
-            <div class="pull-right"><span class="material-icons">more_horiz</span></div>
-            Ou simplement à l'aide de la facture
-          </div>
-          <div class="dropdown-content">
-            <div class="list-group">
-              <div class="list-group-item">
-                <div class="list-group-item-inner">
-                  <div class="row">
-                    <div class="row-picture">
-                      <i class="material-icons">photo_camera</i>
-                    </div>
-                    <div class="row-content">
-                      <div class="text-semibold">Prendre une photo avec votre appareil.</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="list-group-item">
-                <div class="list-group-item-inner">
-                  <div class="row">
-                    <div class="row-picture">
-                      <i class="material-icons">cloud_upload</i>
-                    </div>
-                    <div class="row-content">
-                      <div class="text-semibold">Télécharger un document</div>
-                      <div>(Google Drive, Dropbox, Disque local...)</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="group-container form-group dropdown-title container-fluid text-md text-italic">
+            une fois le contrat signé vous pourrez compléter avec la facture et/ou la photo de l'objet pour garantir son remboursement
+            sur pièce via notre app mobile
           </div>
           <div class="container-fluid padding-vertical">
             <div class="row">
               <div class="col-xs-4">
                 <p class="text-sm">Vétusté</p>
-                <div class="text-lg"><span class=" text-danger">- {{quoteService.valuableItem.depreciation | number:'1.2-2'}}</span> €</div>
+                <div class="text-lg"><span class=" text-danger">{{(1-quoteService.valuableItem.depreciation)*100 | number:'1.0-0'}}</span> %</div>
               </div>
               <div class="col-xs-4">
                 <p class="text-sm">Valeur estimée</p>
@@ -138,7 +94,8 @@
                   <div class="row-action-primary">
                     <md-slide-toggle [(ngModel)]="quoteService.valuableItem.insuranceOptions.theft.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">-{{quoteService.valuableItem.insuranceOptions.theft.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.valuableItem.insuranceOptions.theft.state?'-':'+'}}{{quoteService.valuableItem.insuranceOptions.theft.cost
+                        | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -153,7 +110,7 @@
         <div class="text-lg text-semibold">
           <p>
             Le détail de vos garanties <br/>
-            <a routerLink="/quote/valuable-item-guarantees"><span class="text-info">c'est par ici</span></a>
+            <a routerLink="/quote/valuable-item-guarantees/{{origin}}"><span class="text-info">c'est par ici</span></a>
             <span class="twa twa-thumbsup"></span>
             <span class="twa twa-relaxed"></span>
           </p>

@@ -16,6 +16,14 @@ export class SummaryComponent implements OnInit {
 
   getValuableItem(vi) {
     this.quoteService.valuableItem = vi;
-    this.router.navigate(['/quote/valuable-item'])
+    this.router.navigate(['/quote/valuable-item/habitation'])
+  }
+
+  delete(vi) {
+    this.quoteService.valuableItems.splice(this.quoteService.valuableItems.indexOf(vi), 1);
+  }
+
+  deleteHabitation() {
+    this.quoteService.habitationType = '';
   }
 }

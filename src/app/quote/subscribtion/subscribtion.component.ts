@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from "../quote.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'hv-subscribtion',
@@ -8,9 +9,14 @@ import { QuoteService } from "../quote.service";
 })
 export class SubscribtionComponent implements OnInit {
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(private router: Router, private quoteService: QuoteService) { }
 
   ngOnInit() {
+  }
+
+  validQuote() {
+    // register quote on server
+    this.router.navigate(['/quote/finish']);
   }
 
 }

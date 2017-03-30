@@ -23,6 +23,7 @@ import { HabitationPageComponent } from './product/habitation-page/habitation-pa
 import { QuoteService } from "./quote/quote.service";
 import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
 import { ProductComponent, VideoDialogComponent } from './product/product.component';
+import { FinishComponent } from './quote/finish/finish.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ProductComponent, VideoDialogComponent } from './product/product.compon
     HabitationPageComponent,
     HabitationGuaranteesComponent,
     ProductComponent,
-    VideoDialogComponent
+    VideoDialogComponent,
+    FinishComponent
   ],
   entryComponents: [
     VideoDialogComponent

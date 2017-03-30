@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from "../quote.service";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
+import * as moment from 'moment';
 
 @Component({
   selector: 'hv-valuable-item',
@@ -8,13 +9,15 @@ import { Router, ActivatedRoute } from "@angular/router";
   styleUrls: ['./valuable-item.component.scss']
 })
 export class ValuableItemComponent implements OnInit {
-  isDirect: boolean;
+  origin: string;
+  purchaseDate: string;
 
   constructor(private router: Router, private route: ActivatedRoute, private quoteService: QuoteService) {
+    console.log('constructor vi');
   }
 
   ngOnInit() {
-    this.isDirect = this.route.snapshot.data.direct;
+      this.origin = this.route.snapshot.params.origin;
   }
 
   validate() {
@@ -23,11 +26,20 @@ export class ValuableItemComponent implements OnInit {
   }
 
   goBack() {
-    if (this.isDirect) {
+    if (this.origin === 'objets') {
       this.router.navigate(['/product/valuable-item']);
     } else {
       this.router.navigate(['/quote/summary'])
     }
+  }
+
+  format() {
+    this.purchaseDate = moment(this.quoteService.valuableItem.purchaseDate, 'DDMMYYYY').format('DD/MM/YYYY');
+    this.quoteService.calculAmount();
+  }
+
+  unformat() {
+    this.purchaseDate = this.quoteService.valuableItem.purchaseDate;
   }
 
 }
