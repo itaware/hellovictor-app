@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ng build && node app.js",
-    "monitor": "nodemon app.js",
+    "start": "ng build && node server.js",
+    "monitor": "nodemon server.js",
     "deploy": "gcloud app deploy app.yaml"
   },
   "private": true,
