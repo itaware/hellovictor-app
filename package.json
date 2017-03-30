@@ -3,9 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "ng build && node server.js",
+    "start": "node server.js",
     "monitor": "nodemon server.js",
     "deploy": "gcloud app deploy app.yaml"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": ">=7.7.3",
+    "npm": ">=4.1.2"
   },
   "private": true,
   "dependencies": {

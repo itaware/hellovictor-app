@@ -24,8 +24,6 @@ skip_files:
  - ^e2e$
  - \.editorconfig
  - ^karma\.config\.js
- - ^package\.json
  - ^protractor\.conf\.js
  - ^tslint\.json
- - ^tsconfig\.json
 
