@@ -26,4 +26,5 @@ skip_files:
  - ^karma\.config\.js
  - ^protractor\.conf\.js
  - ^tslint\.json
+ - ^tsconfig\.json
 
