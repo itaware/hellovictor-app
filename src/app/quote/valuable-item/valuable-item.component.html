@@ -23,36 +23,36 @@
       </div>
       <div class="col-xs-12 col-md-8">
         <div class="row">
-          <div class="group-container">
-            <div class="form-group form-group-md">
-              <md-input-container class="text-lg">
-                <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
-              </md-input-container>
-            </div>
+          <div class="group-container clearfix">
+            <md-input-container class="text-lg">
+              <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
+            </md-input-container>
           </div>
         </div>
         <div class="row">
           <div class="group-container form-group">
-            <p class="text-lg">La valeur de votre appareil</p>
+            <p class="text-lg">Calculez la valeur de votre appareil</p>
+            <div class="text-md"><strong>En indiquand le montant et la date d'achat</strong></div>
           </div>
-          <div class="group-container form-group form-group-md">
+          <div class="group-container clearfix">
             <div class="row col-xs-9">
+              <label class="control-label">Montant de l'achat</label>
               <div class="form-control-infos"><span class="text-semibold text-lg">€</span></div>
-              <md-input-container class="text-lg">
+              <md-input-container class="text-lg" floatPlaceholder="never">
                 <input mdInput placeholder="Montant de l'achat" [(ngModel)]="quoteService.valuableItem.purchaseAmount" (blur)="quoteService.calculAmount()">
               </md-input-container>
             </div>
           </div>
-          <div class="group-container form-group form-group-md">
+          <div class="group-container clearfix">
             <div class="row col-xs-9 ">
-              <div class="form-control-infos"><span class="text-lg icon icon-calendar"></span></div>
               <label>Date de l'achat</label>
+              <div class="form-control-infos"><span class="text-lg icon icon-calendar"></span></div>
               <md-input-container class="text-lg" floatPlaceholder="never">
                 <input mdInput placeholder="JJMMAAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="format()" (focus)="unformat()" [value]="purchaseDate">
               </md-input-container>
             </div>
           </div>
-          <div class="group-container form-group dropdown-title container-fluid text-md text-italic">
+          <div class="group-container clearfix dropdown-title container-fluid text-md text-italic">
             une fois le contrat signé vous pourrez compléter avec la facture et/ou la photo de l'objet pour garantir son remboursement
             sur pièce via notre app mobile
           </div>
@@ -110,9 +110,11 @@
         <div class="text-lg text-semibold">
           <p>
             Le détail de vos garanties <br/>
-            <a routerLink="/quote/valuable-item-guarantees/{{origin}}"><span class="text-info">c'est par ici</span></a>
-            <span class="twa twa-thumbsup"></span>
-            <span class="twa twa-relaxed"></span>
+            <a routerLink="/quote/valuable-item-guarantees/{{origin}}">
+              <span class="text-info">c'est par ici</span>
+              <span class="twa twa-thumbsup"></span>
+              <span class="twa twa-relaxed"></span>
+            </a>
           </p>
         </div>
       </div>

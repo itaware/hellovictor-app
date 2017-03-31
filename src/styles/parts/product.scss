@@ -1,68 +1,4 @@
-.product{
-  .product-header{
-    height: 100vh;
-    line-height: 100vh;
-    @include cover();
-    .heading-title{
-      position: relative;
-      display:inline-block;
-      vertical-align: bottom;
-      padding: 5% 5%;
-      color: #fff;
-      width: 100%;
-      line-height: 4;
-      text-align: center;
-      .heading-left, .heading-right{
-        line-height: 1;
-      }
-      .btn{
-        margin-top: 4%;
-        padding: 15px 10px;
-        width: 100%;
-        min-width: 0;
-        max-width: 625px;
-        font-size: 24px;
-        font-weight: 400;
-        text-transform: uppercase;
-      }
-      @media(max-width: $screen-sm-max){
-        vertical-align: text-top;
-        .btn{
-          font-size: 17px;
-        }
 
-      }
-    }
-  }
-
-  &-title{
-    margin: 0;
-    font-size: 72px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
-  &-subtitle{
-    font-size: 30px;
-  }
-
-  @media(min-width: $screen-md-min){
-    .heading-left{
-      float: left;
-    }
-    .heading-right{
-      float: right;
-    }
-  }
-  @media(max-width: $screen-xs-max){
-    &-title{
-      font-size: 48px;
-    }
-    &-subtitle{
-      font-size: 22px;
-    }
-  }
-}
 .block-talk{
   background: url(/assets/images/declaration/bg-talk.svg) center top no-repeat;
   background-size: 90%;
@@ -145,59 +81,10 @@
     }
   }
 }
-.container-object{
-  margin: 10% auto;
-  .object-name{
-    color: #fff;
-    margin: 0 0 15px;
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-  a{
-    &:hover{
-      text-decoration: none;
-    }
-  }
-}
-.product-list{
-  display:flex;
-  height: 100%;
-  padding: 0;
-  @media(max-width: $screen-xs-max){
-    flex-direction: column;
-  }
-  .container-object{
-    height: 100%;
-    min-height: 320px;
-    margin: 0;
-    background: no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
-    &.objects{
-      background-image: url(/assets/images/product-type/product-object.jpg);
-    }
-    &.habitation{
-      background-image: url(/assets/images/product-type/product-house.jpg);
-    }
-    &.digital{
-      background-image: url(/assets/images/product-type/product-digital.jpg);
-    }
-  }
-}
 @media(min-width: $screen-sm-min){
 
     .alternate-item{
-      .row.product-item {
-        > div {
-          // min-height: 550px;
-          // height: 100%;
-        }
-        
-      }
       .cover{
         img{
           top:0;

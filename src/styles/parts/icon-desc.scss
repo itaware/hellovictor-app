@@ -18,6 +18,12 @@
     font-size: 2.4em;
     font-weight: 500;
     margin-bottom: 0;
+    a{
+      color: inherit;
+      &:hover{
+        text-decoration: none;
+      }
+    }
   }
   &-desc{
     margin-bottom: 15px;
