@@ -26,6 +26,14 @@ export class ProductComponent implements OnInit {
     this.dialog.open(VideoDialogComponent);
   }
 
+  goToQuotey() {
+    if (this.page === 'habitation') {
+      this.router.navigate(['quote', 'habitation']);
+    } else {
+      this.router.navigate(['quote', 'valuable-item', 'objets']);
+    }
+  }
+
 }
 
 @Component({

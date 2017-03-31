@@ -9,7 +9,7 @@ import { Router } from "@angular/router";
 })
 export class SummaryComponent implements OnInit {
 
-  constructor(private router: Router, private quoteService: QuoteService) { }
+  constructor(private router: Router, public quoteService: QuoteService) { }
 
   ngOnInit() {
   }

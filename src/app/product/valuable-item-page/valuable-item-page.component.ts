@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 export class ValuableItemPageComponent implements OnInit {
   baseUrl: string = '/assets/';
 
-  constructor(private router: Router, private route: ActivatedRoute, private quoteService: QuoteService, private element: ElementRef) { 
+  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) { 
   }
 
   ngOnInit() {

@@ -3,6 +3,7 @@ import * as moment from 'moment';
 
 class ValuableItem {
   premiumRatio = 0.032;
+  name: string;
   purchaseAmount = null;
   purchaseDate = null;
   insuranceOptions = {
@@ -90,6 +91,7 @@ export class QuoteService {
   city: string;
   zipCode: string;
   square: string;
+  floor: string;
   insuranceOptions: any = {
     replacementNew: { state: true, cost: 1.3 },
     dependency: { state: false, cost: 0.8 },

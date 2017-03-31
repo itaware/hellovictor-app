@@ -8,7 +8,7 @@ import { QuoteService } from "../quote.service";
 })
 export class HabitationAddOnComponent implements OnInit {
 
-  constructor(private quoteService: QuoteService) { }
+  constructor(public quoteService: QuoteService) { }
 
   ngOnInit() {
   }

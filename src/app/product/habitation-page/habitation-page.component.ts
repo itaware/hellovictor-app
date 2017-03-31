@@ -10,7 +10,7 @@ import { QuoteService } from "../../quote/quote.service";
 export class HabitationPageComponent implements OnInit {
   baseUrl: string = '/assets/';
 
-  constructor(private router: Router, private quoteService: QuoteService, private element: ElementRef) { }
+  constructor(private router: Router, public quoteService: QuoteService, private element: ElementRef) { }
 
   ngOnInit() {
     this.element.nativeElement.scrollIntoView();

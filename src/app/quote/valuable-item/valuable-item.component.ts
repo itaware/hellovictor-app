@@ -12,7 +12,7 @@ export class ValuableItemComponent implements OnInit {
   origin: string;
   purchaseDate: string;
 
-  constructor(private router: Router, private route: ActivatedRoute, private quoteService: QuoteService) {
+  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService) {
     console.log('constructor vi');
   }
 
