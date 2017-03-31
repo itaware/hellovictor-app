@@ -3,16 +3,6 @@ runtime: nodejs
 env: flex
 # [END runtime]
 
-handlers:
-
-- url: /(.+)
-  static_files: dist/\1
-  upload: dist/(.*)
-
-- url: /
-  static_files: dist/index.html
-  upload: dist/index.html
-
 # Temporary setting to keep gcloud from uploading node_modules
 skip_files:
  - ^node_modules$
