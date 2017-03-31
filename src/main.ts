@@ -147,9 +147,6 @@ jQuery(document).ready(function ($) {
 
     return position + '%';
   }
+
   
-  $('.dropdown-title').on('click', function (e) {
-    e.preventDefault();
-    $(this).next('.dropdown-content').slideToggle();
-  });
 });
