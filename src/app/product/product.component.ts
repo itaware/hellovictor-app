@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
-import { MdDialog } from "@angular/material";
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { MdDialog } from '@angular/material';
 
 @Component({
   selector: 'hv-product',
@@ -8,8 +8,8 @@ import { MdDialog } from "@angular/material";
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  baseUrl: string = '/assets/';
-  page: string = 'objets';
+  baseUrl = '/assets/';
+  page = 'objets';
 
   constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog) {
     this.router.events
@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
     this.dialog.open(VideoDialogComponent);
   }
 
-  goToQuotey() {
+  goToQuote() {
     if (this.page === 'habitation') {
       this.router.navigate(['quote', 'habitation']);
     } else {

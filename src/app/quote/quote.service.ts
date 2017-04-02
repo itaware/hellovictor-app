@@ -45,7 +45,6 @@ export class QuoteService {
   }
 
   sendQuote() {
-
     this.http.post('/api/quote', JSON.stringify(this), OPTIONS)
       .map((res: Response) => {
         console.log(res);
@@ -57,7 +56,17 @@ export class QuoteService {
       }).subscribe((json) => {
         console.log(json);
       });
+  }
 
+  toJSON() {
+    return {
+      firstName: this.firstName,
+      lastName: this.lastName,
+      email: this.email,
+      habitation: JSON.stringify(this.habitation),
+      valuableItems: JSON.stringify(this.valuableItems),
+      amount: this.amount
+    };
   }
 
 }
