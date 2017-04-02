@@ -28,14 +28,14 @@ export class Server {
 
     private config() {
 
-        this.app.use(express.static(path.join(__dirname, 'dist')));
+        this.app.use(express.static(path.join(__dirname, '../dist')));
         this.app.use(bodyParser.json());
 
         this.app.use(bodyParser.urlencoded({
             extended: true
         }));
 
-        this.app.use(function (err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
+        this.app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
             err.status = 404;
             next(err);
         });
