@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Router } from "@angular/router";
 import { QuoteService } from "../../quote/quote.service";
+import { Habitation } from "../../quote/habitation";
 
 @Component({
   selector: 'hv-habitation-page',
@@ -17,17 +18,7 @@ export class HabitationPageComponent implements OnInit {
   }
 
   loadQuote(type) {
-    if (type === 'studio') {
-      this.quoteService.roomsNumber = 1;
-      this.quoteService.habitationValue = 10000;
-    } else if (type === 'flat') {
-      this.quoteService.roomsNumber = 3;
-      this.quoteService.habitationValue = 30000;
-    } else if (type === 'house') {
-      this.quoteService.roomsNumber = 5;
-      this.quoteService.habitationValue = 50000;
-    }
-    this.router.navigate(['quote', 'habitation']);
+    this.router.navigate(['quote', 'habitation', type]);
   }
 
 }

@@ -24,6 +24,6 @@ export class SummaryComponent implements OnInit {
   }
 
   deleteHabitation() {
-    this.quoteService.habitationType = '';
+    this.quoteService.habitation = null;
   }
 }

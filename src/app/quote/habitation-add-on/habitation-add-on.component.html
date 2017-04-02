@@ -14,8 +14,8 @@
     <div class="row">
       <div class="col-md-4">
         <div class="text-lg padding-vertical">
-          <p>Pour <strong>{{quoteService.amount | number:'1.2-2'}}</strong>€/mois vous êtes assuré en tant que <strong>locataire</strong> d'un <strong>{{quoteService.roomsNumber}} pièces</strong> dont
-            la valeur mobilère est de <strong>{{quoteService.habitationValue}}</strong>€</p>
+          <p>Pour <strong>{{quoteService.amount | number:'1.2-2'}}</strong>€/mois vous êtes assuré en tant que <strong>locataire</strong> d'un <strong>{{quoteService.habitation.rooms}} pièces</strong> dont
+            la valeur mobilère est de <strong>{{quoteService.habitation.value}}</strong>€</p>
         </div>
         <div class="block-note block-info">
           <div class="block-note-icon"><span class="material-icons">info_outline</span></div>

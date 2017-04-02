@@ -29,6 +29,7 @@ const routes: Routes = [
     ]
   },
   {path: 'quote/habitation', component: HabitationComponent},
+  {path: 'quote/habitation/:type', component: HabitationComponent},
   {path: 'quote/habitation-guarantees', component: HabitationGuaranteesComponent},
   {path: 'quote/habitation-add-on', component: HabitationAddOnComponent},
   {path: 'quote/summary', component: SummaryComponent},

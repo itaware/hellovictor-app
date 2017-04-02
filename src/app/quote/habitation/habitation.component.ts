@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { QuoteService } from "../quote.service";
+import { Habitation } from "../habitation";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'hv-habitation',
@@ -8,11 +10,11 @@ import { QuoteService } from "../quote.service";
 })
 export class HabitationComponent implements OnInit {
 
-  constructor(public quoteService: QuoteService) { }
+  constructor(private route: ActivatedRoute, public quoteService: QuoteService) { }
 
   ngOnInit() {
-    if (!this.quoteService.habitationType) {
-      this.quoteService.habitationType = 'renter';
+    if (!this.quoteService.habitation) {
+      this.quoteService.habitation = new Habitation(this.route.snapshot.params.type);
     }
     this.quoteService.calculAmount();
   }

@@ -18,7 +18,7 @@
       <div class="col-md-8">
         <div class="row">
           <div class="list-group">
-            <div class="list-group-item" *ngIf="quoteService.habitationType">
+            <div class="list-group-item" *ngIf="quoteService.habitation">
               <div class="row">
                 <div class="flex-item">
                   <div class="row-content-left">
@@ -28,11 +28,11 @@
                       </button>
                     </div>
                     <div class="row-content">
-                      <div class="text-lg text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.roomsNumber}} pièces</strong> dont la valeur mobilère est de <strong>{{quoteService.habitationValue | number:'1.0-2'}}</strong>                        €</div>
+                      <div class="text-lg text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.habitation.rooms}} pièces</strong> dont la valeur mobilère est de <strong>{{quoteService.habitation.value | number:'1.0-2'}}</strong>                        €</div>
                     </div>
                   </div>
                   <div class="row-content-right">
-                    <div class="text-lg"><strong>{{quoteService.habitationPremium | number:'1.2-2'}}</strong></div>
+                    <div class="text-lg"><strong>{{quoteService.habitation.premium | number:'1.2-2'}}</strong></div>
                     <div class="text-sm text-center">€/mois</div>
                     <a (click)="deleteHabitation()"><span class="material-icons">delete</span></a>
                   </div>
@@ -117,7 +117,7 @@
                 </div>
               </div>
             </div>
-            <div class="list-group-item" *ngIf="!quoteService.habitationType">
+            <div class="list-group-item" *ngIf="!quoteService.habitation">
               <div class="row flex-item">
                 <div class="row-content-left">
                   <div class="row-content text-lg col-xs-12">

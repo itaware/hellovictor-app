@@ -22,7 +22,7 @@
       <div class="col-md-8">
         <div class="row">
           <div class="group-container">
-            <md-radio-group class="habitation-type" [(ngModel)]="quoteService.habitationType">
+            <md-radio-group class="habitation-type" [(ngModel)]="quoteService.habitation.type">
               <md-radio-button value="renter">Locataire</md-radio-button>
               <md-radio-button value="owner" disabled>Propriétaire</md-radio-button>
             </md-radio-group>
@@ -30,31 +30,31 @@
           <div class="group-container">
             <div class="text-lg">À quel endroit ?</div>
             <md-input-container class="text-lg">
-              <input mdInput placeholder="n° et rue" [(ngModel)]="quoteService.address">
+              <input mdInput placeholder="n° et rue" [(ngModel)]="quoteService.habitation.address">
             </md-input-container>
             <md-input-container class="text-lg">
-              <input mdInput placeholder="Code postal" [(ngModel)]="quoteService.zipCode">
+              <input mdInput placeholder="Code postal" [(ngModel)]="quoteService.habitation.zipCode">
             </md-input-container>
             <md-input-container class="text-lg">
-              <input mdInput placeholder="Ville" [(ngModel)]="quoteService.city">
+              <input mdInput placeholder="Ville" [(ngModel)]="quoteService.habitation.city">
             </md-input-container>
             <md-input-container class="text-lg">
-              <input mdInput placeholder="Quartier" [(ngModel)]="quoteService.square">
+              <input mdInput placeholder="Quartier" [(ngModel)]="quoteService.habitation.square">
             </md-input-container>
           </div>
           <div class="group-container">
             <div class="text-lg">À quel étage ?</div>
-            <md-slider [(ngModel)]="quoteService.floor" class="habitation-floor" min="1" max="50" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
+            <md-slider [(ngModel)]="quoteService.habitation.floor" class="habitation-floor" min="1" max="50" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
           <div class="group-container">
             <div class="text-lg">Combien de pièces il y a ?</div>
-            <md-slider [(ngModel)]="quoteService.roomsNumber" class="habitation-rooms" min="1" max="5" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
+            <md-slider [(ngModel)]="quoteService.habitation.rooms" class="habitation-rooms" min="1" max="5" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
           <div class="group-container">
             <div class="text-lg">
               Approximativement quelle valeur pour votre mobilier ?
             </div>
-            <md-slider [(ngModel)]="quoteService.habitationValue" class="habitation-value" min="5000" max="50000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
+            <md-slider [(ngModel)]="quoteService.habitation.value" class="habitation-value" min="5000" max="50000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
             <p class="text-xs"><i>Une fois votre contrat signé vous pourrez ajuster cette valeur en joignant les factures et/ou photos de vos biens</i></p>
           </div>
           <div class="group-container">
@@ -76,9 +76,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.replacementNew.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.replacementNew.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.replacementNew.state?'-':'+'}}{{quoteService.insuranceOptions.replacementNew.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.replacementNew.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.replacementNew.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -97,9 +97,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.dependency.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.dependency.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.dependency.state?'-':'+'}}{{quoteService.insuranceOptions.dependency.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.dependency.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.dependency.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -119,9 +119,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.occupancy.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.occupancy.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.occupancy.state?'-':'+'}}{{quoteService.insuranceOptions.occupancy.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.occupancy.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.occupancy.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -140,9 +140,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.hotspot.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.hotspot.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.hotspot.state?'-':'+'}}{{quoteService.insuranceOptions.hotspot.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.hotspot.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.hotspot.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -161,9 +161,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.alarm.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.alarm.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.alarm.state?'-':'+'}}{{quoteService.insuranceOptions.alarm.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.alarm.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.alarm.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -182,9 +182,9 @@
                 </div>
                 <div class="row-content-right">
                   <div class="row-action-primary">
-                    <md-slide-toggle [(ngModel)]="quoteService.insuranceOptions.deductible.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
+                    <md-slide-toggle [(ngModel)]="quoteService.habitation.insuranceOptions.deductible.state" (change)="quoteService.calculAmount()"></md-slide-toggle>
                     <div class="togglebutton">
-                      <div class="text-xs text-semibold">{{quoteService.insuranceOptions.deductible.state?'-':'+'}}{{quoteService.insuranceOptions.deductible.cost | currency:'EUR':true:'1.2-2'}}</div>
+                      <div class="text-xs text-semibold">{{quoteService.habitation.insuranceOptions.deductible.state?'-':'+'}}{{quoteService.habitation.insuranceOptions.deductible.cost | currency:'EUR':true:'1.2-2'}}</div>
                     </div>
                   </div>
                 </div>
@@ -199,8 +199,8 @@
           <p>
             Le détail de vos garanties <br/>
             <a routerLink="/quote/habitation-guarantees"><span class="text-info">c'est par ici</span></a>
-            <span class=" twa twa-thumbsup"></span>
-            <span class=" twa twa-relaxed"></span>
+            <span class="twa twa-thumbsup"></span>
+            <span class="twa twa-relaxed"></span>
           </p>
         </div>
       </div>
