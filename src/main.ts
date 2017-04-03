@@ -23,6 +23,13 @@ jQuery(document).ready(function ($) {
   var timeout = new Array();
   var bubble_tab = new Array();
   var bubble_interval = new Array();
+  // menu
+  $('.navbar-toggle').on('click', function(e){console.log( $(this).data('target'));
+    var id_menu = $(this).data('target');
+    $(this).toggleClass('open');
+    $(id_menu).toggleClass('open');
+  });
+  //
   $(window).on('scroll', function () {
     // parallax
     if ($('.bg-parallax').length > 0) {
@@ -148,5 +155,5 @@ jQuery(document).ready(function ($) {
     return position + '%';
   }
 
-  
+
 });

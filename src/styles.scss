@@ -2,16 +2,17 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~@angular/material/core/theming/all-theme';
 
 
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'styles/_base_variables';
 @import 'styles/twemoji-awesome';
 //@import '~normalize.css/normalize';
+/*** angular ***/
 @include mat-core();
 $primary: mat-palette($mat-blue, 700, A100, A400);
 $accent: mat-palette($mat-blue, 600, A100, A400);
 $warn: mat-palette($mat-red, 600);
 $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
+/**  endangular **/
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import '~bootstrap-material-design/sass/bootstrap-material-design';
 @import '~bootstrap-material-design/sass/ripples';

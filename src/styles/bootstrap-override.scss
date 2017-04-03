@@ -165,7 +165,15 @@ label.control-label{
 
   & &-item{
     border-top: 1px solid $alto;
-
+    &[disabled]{
+      opacity: 0.5;
+      .btn[disabled]{
+        background-color: $dove-gray !important;
+      }
+    }
+    a {
+      color: inherit;
+    }
     &:last-child{
       border-bottom: 1px solid $alto;
     }
@@ -185,8 +193,8 @@ label.control-label{
         display:flex;
       }
       .row-content-right{
-        padding-left: 5px;
-        padding-right: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
     &-inner{
@@ -236,7 +244,8 @@ label.control-label{
     }
     .row-content-left,
     .row-content-right{
-      padding: 20px 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
     .row-content-right{
       border-left: 1px solid rgba(0, 0, 0, 0.1);

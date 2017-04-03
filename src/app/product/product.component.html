@@ -1,4 +1,10 @@
 <div class="main-content product-page product-{{page}}">
+  <button type="button" class="navbar-toggle" data-target="#offre-block">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
   <header class="header-site text-center bg-parallax">
     <div class="header-site-inner">
       <div class="header-site-top">
@@ -21,7 +27,7 @@
       </div>
     </div>
   </header>
-  <div id="detail" class="content-top text-center" #observe id="offre-block">
+  <div class="content-top text-center menu-mobile" #observe id="offre-block">
     <h1 class="page-title">Assurez à la demande ce que vous voulez,<br/> quand vous voulez<span class="subtitle text-lowercase">et ce entièrement depuis votre mobile <img src="/assets/images/mobile.png" style="height: 30px"></span></h1>
     <div class="container list-icon-text">
       <div [class.active]="page === 'objets'" class="icon-text-item col-xs-6 col-sm-4">

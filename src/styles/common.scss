@@ -1,4 +1,5 @@
 @import 'common/text';
+@import 'common/menu';
 @import 'components/block-note';
 
 .icon-lg{
@@ -331,5 +332,25 @@ $max-element : 4;
       top: -62px;
       right: -22px;
     }
+  }
+}
+
+.cart-details{
+  margin-bottom: 30px;
+  .cart-item-label{
+    border-left: 4px solid $brand-primary;
+    padding: 0 15px;
+  }
+  .cart-item:nth-child(even){
+    .cart-item-label{
+      border-color: rgba($brand-primary, 0.75);
+    }
+  }
+  .block-price{
+    width: 90px;
+  }
+  .block-remove{
+    width:45px;
+    background: $wild-sand;
   }
 }
