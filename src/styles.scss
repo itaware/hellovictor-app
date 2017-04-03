@@ -1,4 +1,12 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~@angular/material/core/theming/all-theme';
+@include mat-core();
+$primary: mat-palette($mat-light-blue, 600, A100, A400);
+$accent: mat-palette($mat-light-blue, 600, A100, A400);
+$warn: mat-palette($mat-red, 600);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
 @import 'styles/_base_variables';
 @import 'styles/twemoji-awesome';
 //@import '~normalize.css/normalize';
@@ -8,8 +16,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'styles/_theme_variables';
 @import 'styles/_theme-mixins-variables';
 @import 'styles/iconfont';
-@import 'styles/angular-material-override';
 @import 'styles/bootstrap-override';
+@import 'styles/angular-material-override';
 @import 'styles/mixins';
 @import 'styles/common';
 @import 'styles/parts/header';
@@ -30,13 +38,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Work+Sans:300,400,500,600,700|Raleway:300');
 //@import 'fonts/fonts.css';
 
-@import '~@angular/material/core/theming/all-theme';
-@include mat-core();
-$primary: mat-palette($mat-light-blue, 600, A100, A400);
-$accent: mat-palette($mat-light-blue, 600, A100, A400);
-$warn: mat-palette($mat-red, 600);
-$theme: mat-light-theme($primary, $accent, $warn);
-@include angular-material-theme($theme);
+
 
 *,
 *:before,

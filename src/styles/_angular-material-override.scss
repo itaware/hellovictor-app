@@ -1,5 +1,21 @@
-.mat-input-container{  
+.mat-input-container{
   .mat-input-wrapper{
-    margin: 0;
+    margin-top: 0;
+  }
+  .mat-hint{
+    position: static;
+    display:inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: $brand-info;
+
+  }
+}
+.mat-input-info{
+  .mat-input-underline{
+    border-color: $brand-info;
+  }
+  .mat-input-element{
+    color: $brand-info;
   }
 }
