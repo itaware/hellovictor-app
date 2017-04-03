@@ -1,7 +1,7 @@
 <div class="summary-fixed-bottom">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <a class="picto" (click)="goBack()">
+      <a class="picto" (click)="goBack()" id="valuable-item-back">
         <span class="material-icons text-info">arrow_back</span>
       </a>
       <span class="panel-heading-title text-lg">
@@ -113,7 +113,7 @@
         <div class="text-lg text-semibold">
           <p>
             Le détail de vos garanties <br/>
-            <a routerLink="/quote/valuable-item-guarantees/{{origin}}">
+            <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">
               <span class="text-info">c'est par ici</span>
               <span class="twa twa-thumbsup"></span>
               <span class="twa twa-relaxed"></span>
@@ -134,7 +134,7 @@
     </div>
     <div class="pull-right">
       <div class="row">
-        <a (click)="validate()" class="btn btn-primary btn-raised">
+        <a (click)="validate()" class="btn btn-primary btn-raised" id="valuable-item-valid">
           <span class="material-icons">done</span>
           <br/>
           <div class="text-uppercase">Valider</div>

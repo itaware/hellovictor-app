@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { MdDialog } from '@angular/material';
 
@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
   baseUrl = '/assets/';
   page = 'objets';
 
-  constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog) {
+  constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog, private element: ElementRef) {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event) => {
@@ -32,6 +32,10 @@ export class ProductComponent implements OnInit {
     } else {
       this.router.navigate(['quote', 'valuable-item', 'objets']);
     }
+  }
+
+  scrollToDetail() {
+    this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
   }
 
 }
