@@ -10,7 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HabitationComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) { }
+  constructor(private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) { 
+  }
 
   ngOnInit() {
     this.element.nativeElement.scrollIntoView();

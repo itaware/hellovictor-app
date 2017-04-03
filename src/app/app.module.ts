@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent, VideoDialogComponent } from './product/product.component';
 import { ValuableItemPageComponent } from './product/valuable-item-page/valuable-item-page.component';
 import { HabitationPageComponent } from './product/habitation-page/habitation-page.component';
-import { QuoteService } from "./quote/quote.service";
+import { QuoteService } from './quote/quote.service';
 import { QuoteComponent } from './quote/quote.component';
 import { HabitationComponent } from './quote/habitation/habitation.component';
 import { HabitationAddOnComponent } from './quote/habitation-add-on/habitation-add-on.component';
@@ -24,6 +24,7 @@ import { ValuableItemGuaranteesComponent } from './quote/valuable-item-guarantee
 import { ValuableItemsSummaryComponent } from './quote/valuable-items-summary/valuable-items-summary.component';
 import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
 import { FinishComponent } from './quote/finish/finish.component';
+import { MetricsService } from './services/metrics.service';
 
 @NgModule({
   imports: [
@@ -58,7 +59,8 @@ import { FinishComponent } from './quote/finish/finish.component';
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'},
-    QuoteService
+    QuoteService,
+    MetricsService
   ],
   bootstrap: [AppComponent]
 })
