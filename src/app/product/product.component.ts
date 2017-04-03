@@ -30,8 +30,8 @@ export class ProductComponent implements OnInit, AfterViewInit {
 
   openVideo() {
     this.dialog.open(VideoDialogComponent, {
-
-  width: '100%',
+height: '80vh',
+  width: '80%',
 });
   }
 
@@ -51,6 +51,6 @@ export class ProductComponent implements OnInit, AfterViewInit {
 
 @Component({
   selector: 'hv-video',
-  template: '<iframe src="https://www.youtube.com/embed/YmbaM0gYACc?rel=0&autoplay=1" style="width:100%" frameborder="0" allowfullscreen></iframe>'
+  template: '<iframe src="https://www.youtube.com/embed/YmbaM0gYACc?rel=0&autoplay=1" style="width:100%; height: 80vh;" frameborder="0" allowfullscreen></iframe>'
 })
 export class VideoDialogComponent { }

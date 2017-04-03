@@ -24,10 +24,17 @@ jQuery(document).ready(function ($) {
   var bubble_tab = new Array();
   var bubble_interval = new Array();
   // menu
-  $('.navbar-toggle').on('click', function(e){console.log( $(this).data('target'));
+  $('.navbar-toggle').on('click', function(e){
     var id_menu = $(this).data('target');
     $(this).toggleClass('open');
     $(id_menu).toggleClass('open');
+  });
+  $('.icon-text-item').on('click', function(e){
+    $(this).parents('.menu-mobile').removeClass('open');
+    $('.navbar-toggle').removeClass('open');
+    //if($(this).parents('.menu-mobile').hasClass('open')){
+
+  //  }
   });
   //
   $(window).on('scroll', function () {
