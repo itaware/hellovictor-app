@@ -317,5 +317,19 @@ $max-element : 4;
 .form-icon {
   display: inline-block;
   vertical-align: middle;
-  width: 13px;
+  width: 16px;
+}
+
+.container-slider-lg{
+  .group-container-title{
+    margin-bottom: 45px;
+  }
+  .mat-slider{
+    .mat-slider-thumb-label{
+      height: 45px;
+      width: 45px;
+      top: -62px;
+      right: -22px;
+    }
+  }
 }

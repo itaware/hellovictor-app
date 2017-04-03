@@ -32,8 +32,12 @@
                     </div>
                   </div>
                   <div class="row-content-right">
-                    <div class="text-lg"><strong>{{quoteService.habitation.premium | number:'1.2-2'}}</strong></div>
-                    <div class="text-sm text-center">€/mois</div>
+                    <div class="text-center">
+                      <div class="text-sm text-center">Tarif mensuel</div>
+                      <div class="text-lg"><strong>{{quoteService.habitation.premium | number:'1.2-2'}}</strong>€</div>
+                    </div>
+                  </div>
+                  <div class="row-content-right">
                     <a (click)="deleteHabitation()"><span class="material-icons">delete</span></a>
                   </div>
                 </div>
@@ -53,8 +57,12 @@
                     </div>
                   </div>
                   <div class="row-content-right">
-                    <div class="text-lg"><strong>{{vi.premium | number:'1.2-2'}}</strong></div>
-                    <div class="text-sm text-center">€/mois</div>
+                    <div class="text-center">
+                      <div class="text-sm text-center">Tarif mensuel</div>
+                      <div class="text-lg"><strong>{{vi.premium | number:'1.2-2'}}</strong>€</div>
+                    </div>
+                  </div>
+                  <div class="row-content-right">
                     <a (click)="delete(vi)"><span class="material-icons">delete</span></a>
                   </div>
                 </div>

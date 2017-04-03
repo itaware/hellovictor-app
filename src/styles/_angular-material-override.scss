@@ -1,4 +1,5 @@
 .mat-input-container{
+  display: block !important;
   .mat-input-wrapper{
     margin-top: 0;
   }
@@ -8,7 +9,6 @@
     margin-top: 10px;
     font-size: 13px;
     color: $brand-info;
-
   }
 }
 .mat-input-info{
@@ -17,5 +17,59 @@
   }
   .mat-input-element{
     color: $brand-info;
+  }
+}
+
+.mat-radio-group{
+  display:block;
+  padding: 15px 0;
+  .mat-radio-button{
+    margin-right: 30px;
+  }
+  .mat-radio-label-content{
+    color: #000;
+  }
+  .mat-radio-checked {
+    .mat-radio-outer-circle{
+      border-color: #000;
+    }
+    .mat-radio-inner-circle{
+      background-color: #000;
+    }
+  }
+  .mat-radio-disabled{
+    opacity: 0.7;
+  }
+  .mat-hint{
+    position: static;
+    display:block;
+    font-size: 65%;
+    color: $dove-gray;
+  }
+}
+
+// Active slider.
+.mat-slider-thumb-container {
+  .mat-slider-thumb {
+    border-width: 2px;
+    transform: scale(0);
+  }
+
+  &.mat-slider-thumb-label-showing .mat-slider-thumb {
+    transform: scale(0);
+  }
+
+  .mat-slider-thumb-label {
+    border-radius: 50% 50% 0;
+  }
+
+  .mat-slider-thumb-label-text {
+    opacity: 1;
+  }
+}
+.mat-slider-thumb-label-showing.mat-slider-horizontal{
+  display:block;
+  .mat-slider-thumb-label{
+    transform: translateY(5px) scale(1) rotate(45deg);
   }
 }

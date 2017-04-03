@@ -14,44 +14,57 @@
     <div class="row">
       <div class="col-md-4 group-container">
         <div class="text-lg">
-          <p>Votre devis en 3mn chrono <span class="twa twa-relaxed"></span></p>
-          Vous êtes ?
+          <p>
+            Votre devis en 3mn chrono <span class="twa twa-relaxed"></span>
+          </p>
         </div>
       </div>
 
       <div class="col-md-8">
         <div class="row">
           <div class="group-container">
+            <div class="group-container-title text-lg">Vous êtes ?</div>
             <md-radio-group class="habitation-type" [(ngModel)]="quoteService.habitation.type">
               <md-radio-button value="renter">Locataire</md-radio-button>
-              <md-radio-button value="owner" disabled>Propriétaire</md-radio-button>
+
+              <md-radio-button value="owner" disabled>Propriétaire<md-hint>(Offre disponible bientôt)</md-hint></md-radio-button>
             </md-radio-group>
           </div>
           <div class="group-container">
-            <div class="text-lg">À quel endroit ?</div>
-            <md-input-container class="text-lg">
-              <input mdInput placeholder="n° et rue" [(ngModel)]="quoteService.habitation.address">
-            </md-input-container>
-            <md-input-container class="text-lg">
-              <input mdInput placeholder="Code postal" [(ngModel)]="quoteService.habitation.zipCode">
-            </md-input-container>
-            <md-input-container class="text-lg">
-              <input mdInput placeholder="Ville" [(ngModel)]="quoteService.habitation.city">
-            </md-input-container>
-            <md-input-container class="text-lg">
-              <input mdInput placeholder="Quartier" [(ngModel)]="quoteService.habitation.square">
-            </md-input-container>
+            <div class="group-container-title text-lg">À quel endroit ?</div>
+            <div class="row">
+              <div class="col-xs-12">
+                <md-input-container class="text-lg">
+                  <input mdInput placeholder="n° et rue" [(ngModel)]="quoteService.habitation.address">
+                </md-input-container>
+              </div>
+              <div class="col-xs-4">
+                <md-input-container class="text-lg">
+                  <input mdInput placeholder="Code postal" [(ngModel)]="quoteService.habitation.zipCode">
+                </md-input-container>
+              </div>
+              <div class="col-xs-8">
+                <md-input-container class="text-lg">
+                  <input mdInput placeholder="Ville" [(ngModel)]="quoteService.habitation.city">
+                </md-input-container>
+              </div>
+              <div class="col-xs-12">
+                <md-input-container class="text-lg">
+                  <input mdInput placeholder="Quartier" [(ngModel)]="quoteService.habitation.square">
+                </md-input-container>
+              </div>
+            </div>
           </div>
           <div class="group-container">
-            <div class="text-lg">À quel étage ?</div>
+            <div class="group-container-title text-lg">À quel étage ?</div>
             <md-slider [(ngModel)]="quoteService.habitation.floor" class="habitation-floor" min="1" max="50" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
           <div class="group-container">
-            <div class="text-lg">Combien de pièces il y a ?</div>
+            <div class="group-container-title text-lg">Combien de pièces il y a ?</div>
             <md-slider [(ngModel)]="quoteService.habitation.rooms" class="habitation-rooms" min="1" max="5" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
-          <div class="group-container">
-            <div class="text-lg">
+          <div class="group-container container-slider-lg">
+            <div class="group-container-title text-lg">
               Approximativement quelle valeur pour votre mobilier ?
             </div>
             <md-slider [(ngModel)]="quoteService.habitation.value" class="habitation-value" min="5000" max="50000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
