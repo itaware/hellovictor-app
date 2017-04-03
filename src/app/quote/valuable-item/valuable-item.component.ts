@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { QuoteService } from "../quote.service";
-import { Router, ActivatedRoute, NavigationEnd } from "@angular/router";
+import { Component, OnInit, ElementRef } from '@angular/core';
+import { QuoteService } from '../quote.service';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import * as moment from 'moment';
 
 @Component({
@@ -12,11 +12,11 @@ export class ValuableItemComponent implements OnInit {
   origin: string;
   purchaseDate: string;
 
-  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService) {
-    console.log('constructor vi');
+  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) {
   }
 
   ngOnInit() {
+    this.element.nativeElement.scrollIntoView();
       this.origin = this.route.snapshot.params.origin;
   }
 

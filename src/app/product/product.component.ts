@@ -1,17 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { MdDialog } from '@angular/material';
+import { MetricsService } from '../services/metrics.service';
 
 @Component({
   selector: 'hv-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, AfterViewInit {
   baseUrl = '/assets/';
   page = 'objets';
+  @ViewChildren('observe') observedElements: QueryList<any>;
 
-  constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog) {
+  constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog, private element: ElementRef, private metricsService: MetricsService) {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event) => {
@@ -20,6 +22,10 @@ export class ProductComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    this.observedElements.forEach((e) => this.metricsService.observe(e));
   }
 
   openVideo() {
@@ -32,6 +38,10 @@ export class ProductComponent implements OnInit {
     } else {
       this.router.navigate(['quote', 'valuable-item', 'objets']);
     }
+  }
+
+  scrollToDetail() {
+    this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
   }
 
 }

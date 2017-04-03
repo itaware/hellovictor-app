@@ -23,7 +23,7 @@
                 <div class="flex-item">
                   <div class="row-content-left">
                     <div class="row-picture">
-                      <button routerLink="/quote/habitation" class="btn btn-fab btn-info text-lg">
+                      <button routerLink="/quote/habitation" class="btn btn-fab btn-info text-lg" id="summary-edit-habitation">
                         <img src="/assets/images/picto/maison.svg" alt="Maison" />
                       </button>
                     </div>
@@ -38,7 +38,7 @@
                     </div>
                   </div>
                   <div class="row-content-right">
-                    <a (click)="deleteHabitation()"><span class="material-icons">delete</span></a>
+                    <a (click)="deleteHabitation()id="summary-delete-habitation""><span class="material-icons">delete</span></a>
                   </div>
                 </div>
               </div>
@@ -48,7 +48,7 @@
                 <div class="flex-item">
                   <div class="row-content-left">
                     <div class="row-picture">
-                      <button class="btn btn-fab btn-info text-lg" (click)="getValuableItem(vi)">
+                      <button class="btn btn-fab btn-info text-lg" (click)="getValuableItem(vi)" id="summary-edit-valuable-item">
                         <img src="/assets/images/product-type/smartphone.svg" alt="smartphone" />
                       </button>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                   </div>
                   <div class="row-content-right">
-                    <a (click)="delete(vi)"><span class="material-icons">delete</span></a>
+                    <a (click)="delete(vi)" id="summary-delete-objet"><span class="material-icons">delete</span></a>
                   </div>
                 </div>
               </div>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg">
+                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-appareil-numerique">
                       <img src="/assets/images/product-type/smartphone.svg" alt="phone" />
                     </button>
                   </div>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg">
+                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-materiel-loisir">
                       <img src="/assets/images/picto/velo.svg" alt="Vélo" />
                     </button>
                   </div>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg">
+                    <button routerLink="/quote/valuable-item/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-objet-precieux">
                       <img src="/assets/images/picto/montre.svg" alt="Montre" />
                     </button>
                   </div>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/habitation">
+                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/habitation" id="summary-add-habitation">
                       <img src="/assets/images/picto/maison.svg" alt="Maison" />
                     </button>
                   </div>
@@ -160,10 +160,10 @@
           </div>
         </div>
         <div class="group-container">
-          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block">
+          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block" id="summary-valid">
             Je valide mon devis
           </a>
-          <a routerLink="/home" class="center-block text-center">Non merci, ça ne m'intéresse pas</a>
+          <a routerLink="/home" class="center-block text-center" id="summary-cancel">Non merci, ça ne m'intéresse pas</a>
         </div>
       </div>
 

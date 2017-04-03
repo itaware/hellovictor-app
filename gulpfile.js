@@ -28,3 +28,20 @@ gulp.task('serve', ['tsc'], function (cb) {
             .pipe(plugins.notify('Server restarted'));
     });
 });
+
+  var fontName = 'iconfont';
+
+  gulp.task('iconfont', function() {
+    gulp.src(['./iconfont/SVG/*.svg'])
+      .pipe(plugins.iconfontCss({
+        fontName: fontName,
+        path: './iconfont/template-iconfont.css',
+        targetPath: '../../styles/iconfont.scss',
+        fontPath: 'fonts/iconfont/'
+      }))
+      .pipe(plugins.iconfont({
+        formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
+        fontName: fontName
+      }))
+      .pipe(gulp.dest('./src/fonts/iconfont'));
+  });

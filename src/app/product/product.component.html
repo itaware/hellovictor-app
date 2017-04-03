@@ -15,13 +15,13 @@
             <span class="center-block video-text">Voir la vidéo</span>
           </a>
         </div>
-        <a class="btn-down" href="#detail">
+        <a class="btn-down" (click)="scrollToDetail()" id="header-down-click">
           <span class="glyphicon glyphicon-menu-down"></span>
         </a>
       </div>
     </div>
   </header>
-  <div id="detail" class="content-top text-center" data-print="true" id="offre-block">
+  <div id="detail" class="content-top text-center" #observe id="offre-block">
     <h1 class="page-title">Assurez à la demande ce que vous voulez,<br/> quand vous voulez<span class="subtitle text-lowercase">et ce entièrement depuis votre mobile <img src="/assets/images/mobile.png" style="height: 30px"></span></h1>
     <div class="container list-icon-text">
       <div [class.active]="page === 'objets'" class="icon-text-item col-xs-6 col-sm-4">
@@ -67,7 +67,7 @@
             <br/>
           </p>
         </div>
-        <div class="col-xs-12 col-sm-7" data-print="true" id="a-propos">
+        <div class="col-xs-12 col-sm-7" #observe id="a-propos">
           <div class="section-header">
             <h2 class="section-title">
               &Agrave; propos de nous
@@ -168,7 +168,7 @@
           </div>
         </div>
       </div>
-      <div class="block-valign middle " data-print="true" id="declaration-chat-{{page}}">
+      <div class="block-valign middle " #observe id="declaration-chat-{{page}}">
         <hr class="visible-xs" />
         <div class="center-block-xs col-sm-5">
           <div class="text-lg"><strong>Déclaration d'un sinistre</strong></div>
@@ -201,7 +201,7 @@
     </div>
   </section>
   <section class="section alert alert-info ">
-    <div class="container" data-print="true" id="declaration-paiement-{{page}}">
+    <div class="container" #observe id="declaration-paiement-{{page}}">
       <div class="row align-items middle">
         <div class="align-item  col-xs-12 col-sm-6 col-md-4">
           <div class="text-lg">En cas de sinistre</div>
@@ -255,7 +255,7 @@
         <h2 class="section-title text-center text-semibold">Notre démarche</h2>
         <div class="dash dash-center"></div>
       </div>
-      <div class="section-content" data-print="true" id="demarche-objets">
+      <div class="section-content" #observe id="demarche-objets">
         <p>Hello Victor vous propose des couvertures adaptées pour le vol et vandalisme, la casse et les dégradations chez vous
           et en dehors, et même des extensions de garanties en cas de panne.
         </p>
