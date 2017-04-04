@@ -1,19 +1,18 @@
 import * as moment from 'moment';
 
 export class ValuableItem {
-  premiumRatio = 0.032;
   name: string;
-  purchaseAmount = null;
-  purchaseDate = null;
+  purchaseAmount = 0;
+  purchaseDate: string;
   insuranceOptions = {
     theft: { state: false, cost: .42},
     breakdown: { state: false, cost: 2.9 },
     failure: { state: false, cost: 3.9 }
-  }
-  premium: number = 0;
-  value: number = 0;
-  depreciation: number = 1;
-  deductible: number = 0;
+  };
+  premium = 0;
+  value = 0;
+  depreciation = 1;
+  deductible = 0;
 
   constructor() { }
 
@@ -33,7 +32,7 @@ export class ValuableItem {
     } else if (this.value > 500) {
       this.insuranceOptions.theft.cost = .83;
     } else if (this.value > 250) {
-      this.insuranceOptions.theft.cost = .42
+      this.insuranceOptions.theft.cost = .42;
     } else {
       this.insuranceOptions.theft.cost = .42;
     }

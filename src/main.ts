@@ -6,9 +6,11 @@ import { environment } from './environments/environment';
 
 import * as jQuery from 'jquery';
 import 'bootstrap-material-design/dist/js/material';
+import {tawkTo} from './tawk.to';
 
 if (environment.production) {
   enableProdMode();
+  tawkTo();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule);

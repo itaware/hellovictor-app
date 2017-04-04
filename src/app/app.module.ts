@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
+import { DatepickerModule } from 'angular2-material-datepicker'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -26,6 +27,7 @@ import { ValuableItemsSummaryComponent } from './quote/valuable-items-summary/va
 import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
 import { FinishComponent } from './quote/finish/finish.component';
 import { MetricsService } from './services/metrics.service';
+import { PageTransitionComponent } from './page-transition/page-transition.component';
 
 @NgModule({
   imports: [
@@ -35,7 +37,8 @@ import { MetricsService } from './services/metrics.service';
     FormsModule,
     AppRoutingModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    DatepickerModule
   ],
   declarations: [
     AppComponent,
@@ -54,7 +57,8 @@ import { MetricsService } from './services/metrics.service';
     HabitationGuaranteesComponent,
     ProductComponent,
     VideoDialogComponent,
-    FinishComponent
+    FinishComponent,
+    PageTransitionComponent
   ],
   entryComponents: [
     VideoDialogComponent

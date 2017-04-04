@@ -17,7 +17,7 @@ export class ValuableItemComponent implements OnInit {
 
   ngOnInit() {
     this.element.nativeElement.scrollIntoView();
-      this.origin = this.route.snapshot.params.origin;
+    this.origin = this.route.snapshot.params.origin;
   }
 
   validate() {

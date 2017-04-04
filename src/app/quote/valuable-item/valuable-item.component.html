@@ -49,10 +49,10 @@
               <label class="control-label">Date de l'achat</label>
               <div class="form-control-infos">
                 <span class="form-icon"><img src="assets/images/calendar.svg" alt="calendrier" class="img-responsive" /></span>
-                </div>
-      
+              </div>
               <md-input-container class="text-lg" floatPlaceholder="never">
-                <input mdInput placeholder="JJMMAAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="format()" (focus)="unformat()" [value]="purchaseDate">
+                <input mdInput placeholder="JJMMAAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="format()" (focus)="unformat()"
+                  [value]="purchaseDate">
               </md-input-container>
             </div>
           </div>
@@ -72,7 +72,7 @@
               </div>
               <div class="col-xs-4">
                 <p class="text-sm">Franchise</p>
-                <div class="text-lg"><span class="text-success text-semibold">{{quoteService.valuableItem.deductible | number:'1.2-2'}}</span> €</div>
+                <div class="text-lg"><span class="text-success text-semibold">{{quoteService.valuableItem.deductible | number:'1.2-2'}}</span>                  €</div>
               </div>
             </div>
           </div>
