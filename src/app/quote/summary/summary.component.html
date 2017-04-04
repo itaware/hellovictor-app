@@ -21,17 +21,17 @@
             <div class="list-group-item cart-item" *ngIf="quoteService.habitation">
               <div class="row">
                 <div class="flex-item">
-                  <div class="row-content-left cart-item-label">
+                  <a routerLink="/quote/habitation"  class="row-content-left cart-item-label">
                     <div class="row-content">
-                      <div class="text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.habitation.rooms}} pièces</strong> dont la valeur mobilère est de <strong>{{quoteService.habitation.value | number:'1.0-2'}}</strong>                        €</div>
+                      <div class="text-semibold">Votre habitation en tant que <strong>locataire</strong> d'un <strong>{{quoteService.habitation.rooms}} pièces</strong>                        dont la valeur mobilère est de <strong>{{quoteService.habitation.value | number:'1.0-2'}}</strong>                        €</div>
                     </div>
-                  </div>
-                  <div class="row-content-right">
+                  </a>
+                  <a routerLink="/quote/habitation"  class="row-content-right">
                     <div class="text-center block-price">
                       <div class="text-sm text-center">Tarif mensuel</div>
                       <div class="text-lg"><strong>{{quoteService.habitation.premium | number:'1.2-2'}}</strong>€</div>
                     </div>
-                  </div>
+                  </a>
                   <div class="row-content-right block-remove">
                     <a (click)="deleteHabitation()" id="summary-delete-habitation"><span class="material-icons">delete</span></a>
                   </div>
@@ -41,17 +41,17 @@
             <div class="list-group-item cart-item" *ngFor="let vi of quoteService.valuableItems">
               <div class="row">
                 <div class="flex-item">
-                  <div class="row-content-left cart-item-label">
+                  <a (click)="getValuableItem(vi)" class="row-content-left cart-item-label">
                     <div class="row-content">
-                      <div class="text-lg text-semibold">{{vi.name}}</div>
+                      <span class="text-lg text-semibold">{{vi.name}}</span>
                     </div>
-                  </div>
-                  <div class="row-content-right">
+                  </a>
+                  <a (click)="getValuableItem(vi)" class="row-content-right">
                     <div class="text-center">
                       <div class="text-sm text-center">Tarif mensuel</div>
                       <div class="text-lg"><strong>{{vi.premium | number:'1.2-2'}}</strong>€</div>
                     </div>
-                  </div>
+                  </a>
                   <div class="row-content-right  block-remove">
                     <a (click)="delete(vi)" id="summary-delete-objet"><span class="material-icons">delete</span></a>
                   </div>
@@ -69,13 +69,11 @@
           <div class="list-group">
             <div class="list-group-item">
               <div class="row flex-item">
-                <div class="row-content-left">
+                <a routerLink="/quote/valuable-item/1/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
-                    <a routerLink="/quote/valuable-item/1/habitation" >
-                      <strong>Un objet numérique</strong>
-                    </a>
+                    <strong>Un objet numérique</strong>
                   </div>
-                </div>
+                </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
                     <button routerLink="/quote/valuable-item/1/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-appareil-numerique">
@@ -87,13 +85,11 @@
             </div>
             <div class="list-group-item">
               <div class="row flex-item">
-                <div class="row-content-left">
+                <a routerLink="/quote/valuable-item/2/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
-                    <a routerLink="/quote/valuable-item/2/habitation">
-                      <strong>Un objet de loisir</strong>
-                    </a>
+                    <strong>Un objet de loisir</strong>
                   </div>
-                </div>
+                </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
                     <button routerLink="/quote/valuable-item/2/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-materiel-loisir">
@@ -105,13 +101,11 @@
             </div>
             <div class="list-group-item">
               <div class="row flex-item">
-                <div class="row-content-left">
+                <a routerLink="/quote/valuable-item/3/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
-                    <a routerLink="/quote/valuable-item/3/habitation">
-                      <strong>Un objet précieux</strong>
-                    </a>
+                    <strong>Un objet précieux</strong>
                   </div>
-                </div>
+                </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
                     <button routerLink="/quote/valuable-item/3/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-objet-precieux">
@@ -123,13 +117,11 @@
             </div>
             <div class="list-group-item" *ngIf="!quoteService.habitation">
               <div class="row flex-item">
-                <div class="row-content-left">
+                <a routerLink="/quote/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
-                    <a routerLink="/quote/habitation">
                       <strong>Une assurance habitation</strong>
-                    </a>
                   </div>
-                </div>
+                </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
                     <button class="btn btn-fab btn-info text-lg" routerLink="/quote/habitation" id="summary-add-habitation">

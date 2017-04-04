@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { QuoteService } from "../quote.service";
 import { Router } from "@angular/router";
 
@@ -9,9 +9,10 @@ import { Router } from "@angular/router";
 })
 export class SummaryComponent implements OnInit {
 
-  constructor(private router: Router, public quoteService: QuoteService) { }
+  constructor(private router: Router, public quoteService: QuoteService, private element: ElementRef) { }
 
   ngOnInit() {
+    this.element.nativeElement.scrollIntoView();
   }
 
   getValuableItem(vi) {
