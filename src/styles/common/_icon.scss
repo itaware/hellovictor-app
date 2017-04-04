@@ -1,0 +1,40 @@
+.icon-lg{
+  font-size: 31px;
+}
+.icon-large{
+  line-height: 1;
+  font-size: 40px;
+}
+.icon-xl{
+  font-size: 31px;
+}
+.icon-alone-xl{
+  margin: 20px auto;
+  font-size: 80px;
+}
+.icon-fab-border{
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+}
+.check{
+  display: block;
+  background: $check-bg;
+  width: $check-size;
+  height: $check-size;
+  line-height: $check-font-size;
+  border: $check-border-width solid $check-border-color;
+  font-size: $check-font-size;
+  color: $check-color;
+  text-align: center;
+  border-radius: 50%;
+}
+
+
+.form-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+}

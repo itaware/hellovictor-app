@@ -78,6 +78,20 @@ $theme: mat-light-theme($primary, $accent, $warn);
 //@import 'fonts/fonts.css';
 
 
+@font-face {
+	font-family: 'emoji';
+	src:  local('Android Emoji');
+	src:  local('NotoColorEmoji');
+	src:  local('NotoColorEmoji.ttf');
+	src:  local('/system/fonts/NotoColorEmoji.ttf');
+	src:  local('Noto Color Emoji');
+	src:  local('Android Emoji');
+  unicode-range: U+1F44D, U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+}
+
+.emoji{
+  font-family: emoji, sans-serif, quiviraregular;
+}
 
 *,
 *:before,

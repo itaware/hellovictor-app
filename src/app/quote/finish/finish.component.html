@@ -1,16 +1,24 @@
-<div class="panel panel-memo">
-  <div class="panel-body">
-    <div class="text-center">
-      <span class="material-icons text-xl">done</span>
-      <h1 class="text-center">Devis envoyé</h1>
+<div class="alert alert-info text-center">
+  <div class="text-center">
+    <div class="logo small center-block animated bounceIn">
+      <a routerLink="/home" id="back-home-habitation-header"><img src="{{baseUrl}}/assets/images/logo-hello-victor-white.svg" alt="Hello victor" class="img-responsive center-block" /></a>
     </div>
-    <hr />
-    <p>Le tarif indiqué est une estimation.</p>
-    <p>Nous revenons vers vous par mail avec un contrat.</p>
-    <p>Vous pourrez ensuite ajuster votre prime très précisèment en faisant l'inventaire de vos objets et de leur valeur avec
-      vos factures via notre app mobile.</p>
+    <div class="material-icons icon-xl icon-fab-border">done</div>
+    <h1>Magnifique !</h1>
+    <div class="text-md">Votre devis est parti sans encombres</div>
   </div>
-  <div class="group-container">
-    <a routerLink="/home" class="btn btn-lg btn-raised btn-primary center-block" id="finish-back-home">Retour au site</a>
+  <div class="dash dash-center anim dash-white"></div>
+  <div class="text-xs">
+    <p class="text-semibold">
+      Le tarif indiqué est une estimation.
+      <br/>
+      Nous revenons vers vous par mail avec un contrat.
+    </p>
+    <p>Vous pourrez ensuite ajuster votre prime très précisèment en faisant l'inventaire de vos objets et de leur valeur avec
+        vos factures via notre app mobile.</p>
+  </div>
+      <span class="icon-alone-xl twa twa-v"></span>
+      <div>
+      <a routerLink="/home" class="btn btn-lg btn-border" id="finish-back-home">Retour au site</a>
   </div>
 </div>

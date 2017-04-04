@@ -22,6 +22,9 @@
     margin-right: auto;
     transform-origin: center;
   }
+  &.dash-white{
+    @include dash-color(#fff);
+  }
   &.anim{
     transform: scaleX(1);
   }

@@ -28,6 +28,12 @@
     color: #000 !important;
 
   }
+  &.btn-border{
+    border: 1px solid #fff;
+    &:not(.btn-raised):hover{
+      background: none;
+    }
+  }
 }
 
 h1,
