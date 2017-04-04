@@ -14,7 +14,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule);
 
 //jQuery.material.init();
-
+//
 jQuery(document).ready(function ($) {
 
   var bg_pos_init_x = $('.home .header-site').css('background-position-x');
@@ -24,12 +24,12 @@ jQuery(document).ready(function ($) {
   var bubble_tab = new Array();
   var bubble_interval = new Array();
   // menu
-  $('.navbar-toggle').on('click', function(e){
+  $('body').on('click', '.navbar-toggle', function(e){
     var id_menu = $(this).data('target');
     $(this).toggleClass('open');
     $(id_menu).toggleClass('open');
   });
-  $('.icon-text-item').on('click', function(e){
+  $('body').on('click', '.icon-text-item', function(e){
     $(this).parents('.menu-mobile').removeClass('open');
     $('.navbar-toggle').removeClass('open');
     //if($(this).parents('.menu-mobile').hasClass('open')){

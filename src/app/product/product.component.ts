@@ -44,7 +44,7 @@ height: '80vh',
   }
 
   scrollToDetail() {
-    this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
+   this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
   }
 
 }
