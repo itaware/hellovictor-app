@@ -47,13 +47,7 @@
           <div class="group-container clearfix">
             <div class="row col-xs-10 ">
               <label class="control-label">Date de l'achat</label>
-              <div class="form-control-infos">
-                <span class="form-icon"><img src="assets/images/calendar.svg" alt="calendrier" class="img-responsive" /></span>
-              </div>
-              <md-input-container class="text-lg" floatPlaceholder="never">
-                <input mdInput placeholder="JJMMAAAA" [(ngModel)]="quoteService.valuableItem.purchaseDate" (blur)="format()" (focus)="unformat()"
-                  [value]="purchaseDate">
-              </md-input-container>
+              <material-datepicker [(date)]="purchaseDate" dateFormat="DD-MM-YYYY" placeholder="DD/MM/YYYY"></material-datepicker>
             </div>
           </div>
           <div class="group-container clearfix dropdown-title container-fluid text-md text-italic">

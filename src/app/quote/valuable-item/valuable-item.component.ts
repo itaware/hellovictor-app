@@ -10,7 +10,6 @@ import * as moment from 'moment';
 })
 export class ValuableItemComponent implements OnInit {
   origin: string;
-  purchaseDate: string;
 
   constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) {
   }
@@ -33,13 +32,19 @@ export class ValuableItemComponent implements OnInit {
     }
   }
 
-  format() {
-    this.purchaseDate = moment(this.quoteService.valuableItem.purchaseDate, 'DDMMYYYY').format('DD/MM/YYYY');
-    this.quoteService.calculAmount();
+  get purchaseDate(): Date {
+    let purchaseDate: Date;
+    if (this.quoteService.valuableItem.purchaseDate) {
+      purchaseDate = moment(this.quoteService.valuableItem.purchaseDate, 'DD/MM/YYYY').toDate();
+    } else {
+      purchaseDate = new Date();
+    }
+    return purchaseDate;
   }
 
-  unformat() {
-    this.purchaseDate = this.quoteService.valuableItem.purchaseDate;
+  set purchaseDate(date: Date) {
+    this.quoteService.valuableItem.purchaseDate = moment(date).format('DD/MM/YYYY');
+    this.quoteService.calculAmount();
   }
 
 }
