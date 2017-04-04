@@ -104,7 +104,7 @@ label.control-label{
 }
 .group-container{
   margin: 0 0 -1px;
-  padding: 15px;
+  padding: 30px 15px;
   border-top: 1px solid rgba($alto, 0.36);
   border-bottom: 1px solid rgba($alto, 0.36);
   &-title{
@@ -164,9 +164,11 @@ label.control-label{
   }
 
   & &-item{
-    border-top: 1px solid $alto;
+    border-top: 1px solid rgba($alto, 0.36);
     &[disabled]{
-      opacity: 0.5;
+      > * {
+        opacity: 0.5;
+      }
       .btn[disabled]{
         background-color: $dove-gray !important;
       }
@@ -174,11 +176,15 @@ label.control-label{
     a {
       color: inherit;
     }
+    &:first-child{
+      border-top: 1px solid $alto;
+    }
     &:last-child{
       border-bottom: 1px solid $alto;
     }
     .list-group-item-heading{
       line-height: 1.1;
+      font-size: 18px;
     }
     .list-group-item-text{
       font-size: 13px;
