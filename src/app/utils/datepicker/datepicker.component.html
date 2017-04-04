@@ -1,6 +1,6 @@
 <div class="datepicker" [ngStyle]="{'font-family': fontFamily}">
   <md-input-container class="text-lg" floatPlaceholder="never">
-    <input mdInput [placeholder]="placeholder" [disabled]="disabled" [(ngModel)]="inputText" (click)="onInputClick()">
+    <input mdInput [placeholder]="placeholder" [disabled]="disabled" [(ngModel)]="inputText" (click)="onInputClick()" (blur)="changeDate()">
   </md-input-container>
   <div class="datepicker__calendar" *ngIf="showCalendar">
     <div class="datepicker__calendar__nav">

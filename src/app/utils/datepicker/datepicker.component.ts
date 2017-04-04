@@ -6,6 +6,7 @@ import { FormControl, Validators } from '@angular/forms';
 
 import { Calendar } from './calendar';
 import * as moment from 'moment';
+import { detectIE } from '../detectIE';
 
 type DateFormatFunction = (date: Date) => string;
 
@@ -230,6 +231,13 @@ export class DatepickerComponent implements OnInit, OnChanges, OnDestroy {
     this.inputText = inputText;
   }
 
+  changeDate() {
+    const d = moment(this.inputText, this.DEFAULT_FORMAT);
+    if (d.isValid()) {
+      this.date = d.toDate();
+    }
+  }
+
   // -------------------------------------------------------------------------------- //
   // --------------------------------- Click Handlers ------------------------------- //
   // -------------------------------------------------------------------------------- //
@@ -282,7 +290,7 @@ export class DatepickerComponent implements OnInit, OnChanges, OnDestroy {
    */
   isDateValid(date: Date): boolean {
     return (!this.rangeStart || date.getTime() >= this.rangeStart.getTime()) &&
-           (!this.rangeEnd || date.getTime() <= this.rangeEnd.getTime());
+      (!this.rangeEnd || date.getTime() <= this.rangeEnd.getTime());
   }
 
   /**
@@ -293,7 +301,7 @@ export class DatepickerComponent implements OnInit, OnChanges, OnDestroy {
   filterInvalidDays(calendarDays: Array<number>): Array<number> {
     const newCalendarDays = [];
     calendarDays.forEach((day: number | Date) => {
-      if (day === 0 || !this.isDateValid(<Date> day)) {
+      if (day === 0 || !this.isDateValid(<Date>day)) {
         newCalendarDays.push(0);
       } else {
         newCalendarDays.push(day);
@@ -313,7 +321,9 @@ export class DatepickerComponent implements OnInit, OnChanges, OnDestroy {
   * Toggles the calendar when the date input is clicked
   */
   onInputClick(): void {
-    this.showCalendar = !this.showCalendar;
+    if (detectIE() > 10) {
+      this.showCalendar = !this.showCalendar;
+    }
   }
 
   /**
