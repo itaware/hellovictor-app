@@ -10,6 +10,7 @@ import * as moment from 'moment';
 })
 export class ValuableItemComponent implements OnInit {
   origin: string;
+  private _purchaseDate: Date;
 
   constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) {
   }
@@ -17,6 +18,9 @@ export class ValuableItemComponent implements OnInit {
   ngOnInit() {
     this.element.nativeElement.scrollIntoView();
     this.origin = this.route.snapshot.params.origin;
+    if (!this.quoteService.valuableItem.type) {
+      this.quoteService.valuableItem.type = this.route.snapshot.params.type;
+    }
   }
 
   validate() {
@@ -28,21 +32,23 @@ export class ValuableItemComponent implements OnInit {
     if (this.origin === 'objets') {
       this.router.navigate(['/product/valuable-item']);
     } else {
-      this.router.navigate(['/quote/summary'])
+      this.router.navigate(['/quote/summary']);
     }
   }
 
   get purchaseDate(): Date {
-    let purchaseDate: Date;
-    if (this.quoteService.valuableItem.purchaseDate) {
-      purchaseDate = moment(this.quoteService.valuableItem.purchaseDate, 'DD/MM/YYYY').toDate();
-    } else {
-      purchaseDate = new Date();
+    if (!this._purchaseDate) {
+      if (this.quoteService.valuableItem.purchaseDate) {
+        this._purchaseDate = moment(this.quoteService.valuableItem.purchaseDate, 'DD/MM/YYYY').toDate();
+      } else {
+        this._purchaseDate = new Date();
+      }
     }
-    return purchaseDate;
+    return this._purchaseDate;
   }
 
   set purchaseDate(date: Date) {
+    this._purchaseDate = date;
     this.quoteService.valuableItem.purchaseDate = moment(date).format('DD/MM/YYYY');
     this.quoteService.calculAmount();
   }

@@ -39,7 +39,7 @@ height: '80vh',
     if (this.page === 'habitation') {
       this.router.navigate(['quote', 'habitation']);
     } else {
-      this.router.navigate(['quote', 'valuable-item', 'objets']);
+      this.router.navigate(['quote', 'valuable-item', '1', 'objets']);
     }
   }
 

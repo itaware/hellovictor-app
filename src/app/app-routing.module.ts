@@ -34,7 +34,7 @@ const routes: Routes = [
   {path: 'quote/habitation-add-on', component: HabitationAddOnComponent},
   {path: 'quote/summary', component: SummaryComponent},
   {path: 'quote/subscribtion', component: SubscribtionComponent},
-  {path: 'quote/valuable-item/:origin', component: ValuableItemComponent},
+  {path: 'quote/valuable-item/:type/:origin', component: ValuableItemComponent},
   {path: 'quote/valuable-item-guarantees/:origin', component: ValuableItemGuaranteesComponent},
   //{path: 'quote/valuable-items', component: ValuableItemsComponent},
   //{path: 'quote/valuable-items-summary', component: ValuableItemsSummaryComponent},

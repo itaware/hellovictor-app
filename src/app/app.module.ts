@@ -2,11 +2,10 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
-import { DatepickerModule } from 'angular2-material-datepicker'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +27,7 @@ import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/hab
 import { FinishComponent } from './quote/finish/finish.component';
 import { MetricsService } from './services/metrics.service';
 import { PageTransitionComponent } from './page-transition/page-transition.component';
+import { DatepickerComponent } from './utils/datepicker/datepicker.component';
 
 @NgModule({
   imports: [
@@ -35,10 +35,10 @@ import { PageTransitionComponent } from './page-transition/page-transition.compo
     BrowserAnimationsModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule,
-    DatepickerModule
+    FlexLayoutModule
   ],
   declarations: [
     AppComponent,
@@ -58,7 +58,8 @@ import { PageTransitionComponent } from './page-transition/page-transition.compo
     ProductComponent,
     VideoDialogComponent,
     FinishComponent,
-    PageTransitionComponent
+    PageTransitionComponent,
+    DatepickerComponent
   ],
   entryComponents: [
     VideoDialogComponent

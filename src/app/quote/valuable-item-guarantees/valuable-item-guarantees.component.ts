@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from "@angular/router";
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'hv-valuable-item-guarantees',
@@ -12,15 +12,15 @@ export class ValuableItemGuaranteesComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.origin = this.route.snapshot.params.origin
+    this.origin = this.route.snapshot.params.origin;
   }
 
   goBack() {
     if (this.origin === 'objets') {
-      this.router.navigate(['/quote/valuable-item/objets']);
+      this.router.navigate(['/quote/valuable-item', 0, 'objets']);
     } else {
       this.router.navigate(['/quote/valuable-item/habitation'])
-    }    
+    }
   }
 
 }

@@ -12,7 +12,12 @@ export class ValuableItemPageComponent implements OnInit, AfterViewInit {
   baseUrl = '/assets/';
   @ViewChildren('observe') observedElements: QueryList<any>;
 
-  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef, private metricsService: MetricsService) { 
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public quoteService: QuoteService,
+    private element: ElementRef,
+    private metricsService: MetricsService) {
   }
 
   ngOnInit() {
@@ -24,11 +29,7 @@ export class ValuableItemPageComponent implements OnInit, AfterViewInit {
   }
 
   loadQuote(type) {
-    if (type === 'digital') {
-    } else if (type === 'hobby') {
-    } else if (type === 'precious') {
-    }
-    this.router.navigate(['quote', 'valuable-item', 'objets']);
+    this.router.navigate(['quote', 'valuable-item', type, 'objets']);
   }
 
 }

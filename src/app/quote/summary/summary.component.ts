@@ -16,7 +16,7 @@ export class SummaryComponent implements OnInit {
 
   getValuableItem(vi) {
     this.quoteService.valuableItem = vi;
-    this.router.navigate(['/quote/valuable-item/habitation'])
+    this.router.navigate(['/quote/valuable-item', vi.type, 'habitation']);
   }
 
   delete(vi) {

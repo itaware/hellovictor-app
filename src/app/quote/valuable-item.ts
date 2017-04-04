@@ -1,8 +1,15 @@
 import * as moment from 'moment';
 
+  enum TYPE {
+    DIGITAL,
+    LEISURE,
+    PRECIOUS
+  }
+
 export class ValuableItem {
   name: string;
-  purchaseAmount = 0;
+  type: number;
+  purchaseAmount: number;
   purchaseDate: string;
   insuranceOptions = {
     theft: { state: false, cost: .42},
@@ -75,6 +82,14 @@ export class ValuableItem {
       this.depreciation = .6;
     } else if (d > 6) {
       this.depreciation = .8;
+    }
+  }
+
+  typeDescription() {
+    switch (this.type) {
+      case TYPE.DIGITAL: return 'appareil numérique';
+      case TYPE.LEISURE: return 'matériel de loisir';
+      case TYPE.PRECIOUS: return 'objet précieux';
     }
   }
 }

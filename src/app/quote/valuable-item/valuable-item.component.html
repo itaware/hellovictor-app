@@ -26,7 +26,7 @@
           <div class="group-container clearfix">
             <md-input-container class="text-lg" floatPlaceholder="never">
               <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
-              <md-hint align="end">Objet nomade</md-hint>
+              <md-hint align="end">{{quoteService.valuableItem.typeDescription()}}</md-hint>
             </md-input-container>
           </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="group-container clearfix">
             <div class="row col-xs-10 ">
               <label class="control-label">Date de l'achat</label>
-              <material-datepicker [(date)]="purchaseDate" dateFormat="DD-MM-YYYY" placeholder="DD/MM/YYYY"></material-datepicker>
+              <hv-datepicker [(date)]="purchaseDate" dateFormat="DD-MM-YYYY" placeholder="DD/MM/YYYY"></hv-datepicker>
             </div>
           </div>
           <div class="group-container clearfix dropdown-title container-fluid text-md text-italic">
