@@ -66,7 +66,13 @@
     opacity: 1;
   }
 }
-
+.mat-slider-horizontal-label-end{
+  float: right;
+  margin-top: -20px;
+  margin-right: 8px;
+  color: $brand-info;
+  font-weight: 500;
+}
 .mat-slider-thumb-label-showing.mat-slider-horizontal {
   display: block;
   .mat-slider-thumb-label {
