@@ -28,7 +28,7 @@ export class QuoteService {
       this.habitation.calculAmount();
       this.amount = this.habitation.premium;
     }
-    if (this.valuableItem.purchaseAmount) {
+    if (this.valuableItem && this.valuableItem.purchaseAmount) {
       this.valuableItem.calculAmount();
       this.amount += this.valuableItem.premium;
     }

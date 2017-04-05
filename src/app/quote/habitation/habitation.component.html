@@ -31,7 +31,7 @@
             </md-radio-group>
           </div>
           <div class="group-container">
-            <div class="group-container-title text-lg">À quel endroit ?</div>
+            <div class="group-container-title text-lg">Votre adresse ?</div>
             <div class="row">
               <div class="col-xs-12">
                 <md-input-container class="text-lg" floatPlaceholder="never">
@@ -56,23 +56,24 @@
             </div>
           </div>
           <div class="group-container clearfix">
-            <div class="group-container-title text-lg">À quel étage ?</div>
+            <div class="group-container-title text-lg">À quel étage habitez-vous ?</div>
             <md-slider [(ngModel)]="quoteService.habitation.floor" class="habitation-floor" min="1" max="6" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
             <div class="mat-slider-horizontal-label-end pull-right text-semibold text-info">et +</div>
           </div>
           <div class="group-container">
-            <div class="group-container-title text-lg">Combien de pièces ?</div>
+            <div class="group-container-title text-lg">De combien de pièces disposez-vous ?</div>
             <md-slider [(ngModel)]="quoteService.habitation.rooms" class="habitation-rooms" min="1" max="5" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
           <div class="group-container container-slider-lg">
             <div class="group-container-title text-lg">
-              Approximativement quelle valeur pour votre mobilier ?
+              Quelle est la valeur de votre mobilier ?
             </div>
             <md-slider [(ngModel)]="quoteService.habitation.value" class="habitation-value" min="1000" max="80000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
-            <p class="text-xs"><i>Une fois votre contrat signé vous pourrez ajuster cette valeur en joignant les factures et/ou photos de vos biens</i></p>
+            <p class="text-xs"><i>Une fois votre contrat signé vous pourrez affiner la valorisation de votre capital mobilier en joignant factures + photos des biens qui comptent pour vous.
+              <br>Ainsi vous dormirez tranquille et en cas de sinistre vous serez rembourser sans discussions et dans les meilleures conditions.</i></p>
           </div>
           <div class="group-container">
-            <p class="text-lg">Avec quelles conditions ?</p>
+            <p class="text-lg"><b>À quelles conditions et options souhaitez-vous être assurés ?</b></p>
           </div>
           <div class="list-group list-group-gray">
             <div class="list-group-item">

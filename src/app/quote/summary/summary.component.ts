@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
-import { QuoteService } from "../quote.service";
-import { Router } from "@angular/router";
+import { QuoteService } from '../quote.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'hv-summary',

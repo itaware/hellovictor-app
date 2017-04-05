@@ -36,6 +36,14 @@ export class ValuableItemComponent implements OnInit {
     }
   }
 
+  exemple(): string {
+    switch (this.quoteService.valuableItem.type) {
+      case 1: return 'iPhone 7plus';
+      case 2: return 'Vélo électrique GoCycle';
+      case 3: return 'montre Tudor';
+    }
+  }
+
   get purchaseDate(): Date {
     if (!this._purchaseDate) {
       if (this.quoteService.valuableItem.purchaseDate) {

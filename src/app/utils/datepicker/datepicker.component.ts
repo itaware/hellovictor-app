@@ -58,11 +58,11 @@ export class DatepickerComponent implements OnInit, OnChanges, OnDestroy {
   @Input() rangeStart: Date;
   @Input() rangeEnd: Date;
   // data
-  @Input() placeholder = 'Select a date';
+  @Input() placeholder = 'Sélectionnez une date';
   @Input() inputText: string;
   // view logic
   @Input() showCalendar: boolean;
-  @Input() cancelText = 'Cancel';
+  @Input() cancelText = 'Annuler';
   @Input() weekStart = 0;
   // events
   @Output() onSelect = new EventEmitter<Date>();

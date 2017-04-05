@@ -2,16 +2,16 @@
   <div class="panel-page-header panel panel-default no-margin">
     <div class="panel-heading">
       <span class="panel-heading-title text-lg">
-        <strong>Ma sélection</strong>
+        <strong>Ma police d'assurance</strong>
       </span>
     </div>
   </div>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 alert alert-info">
         <div class="text-lg padding-vertical">
-          <p>Pour <strong>{{quoteService.amount | number:'1.2-2'}}</strong> €/mois vous avez assuré</p>
+          <p>Pour seulement <strong>{{quoteService.amount | number:'1.2-2'}}</strong> €/mois vous serez maintenant bien assuré</p>
         </div>
       </div>
 
@@ -64,7 +64,9 @@
         </div>
 
         <div class="text-lg">
-          Vous pouvez compléter avec ...
+          <b>Avez-vous autre chose à assurer ?</b>
+          <br>
+          <span class="text-xs">(si oui sélectionnez une des catégories ci-dessous)</span>
         </div>
 
         <div class="row">

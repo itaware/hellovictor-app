@@ -11,10 +11,10 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-4">
+      <div class="col-xs-12 col-md-4 alert alert-info">
         <div class="text-lg">
           <p>
-            Pour assurer un objet et connaitre le prix on a besoin de quelques détails ...
+            <b>Pour assurer</b> un objet et connaitre le juste prix <b>nous avons besoin de quelques détails</b> ...
             <br/>
             <span class="text-md twa twa-ok-hand"></span>
             <span class="text-md twa twa-wink"></span>
@@ -25,7 +25,7 @@
         <div class="row">
           <div class="group-container clearfix">
             <md-input-container class="text-lg" floatPlaceholder="never">
-              <input mdInput placeholder="Intitulé de l'objet" [(ngModel)]="quoteService.valuableItem.name">
+              <input mdInput placeholder="Intitulé de l'objet (ex {{exemple()}})" [(ngModel)]="quoteService.valuableItem.name">
               <md-hint align="end">{{quoteService.valuableItem.typeDescription()}}</md-hint>
             </md-input-container>
           </div>
@@ -33,7 +33,7 @@
         <div class="row">
           <div class="group-container form-group">
             <p class="text-lg">Calculez la valeur de votre appareil</p>
-            <div class="text-md"><strong>En indiquand le montant et la date d'achat</strong></div>
+            <div class="text-md"><strong>En indiquand le prix ainsi que la date d'achat</strong></div>
           </div>
           <div class="group-container clearfix">
             <div class="row col-xs-10">
@@ -51,8 +51,8 @@
             </div>
           </div>
           <div class="group-container clearfix dropdown-title container-fluid text-md text-italic">
-            Une fois le contrat signé vous pourrez compléter avec la facture et/ou la photo de l'objet pour garantir son remboursement
-            sur pièce via notre app mobile.
+            A la validation de votre contrat d'assurance vous pourrez compléter avec facture + photo de l'objet à assurer pour garantir son remboursement
+            sur justificatif via notre app mobile.
           </div>
           <div class="container-fluid padding-vertical">
             <div class="row">
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="group-container">
-            <div class="text-lg">Optimisez votre protection</div>
+            <div class="text-lg"><b>Le saviez vous ?</b> vous pouvez aussi compléter en optimisant votre protection</div>
           </div>
           <div class="list-group list-group-gray">
             <div class="list-group-item">
@@ -107,9 +107,9 @@
       <div class="group-container">
         <div class="text-lg text-semibold">
           <p>
-            Le détail de vos garanties <br/>
+            Trouvez <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">ici</a> le détail de vos garanties <br/>
             <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">
-              <span class="text-info">c'est par ici</span>
+              <span class="text-info">voir</span>
               <span class="twa twa-thumbsup"></span>
               <span class="twa twa-relaxed"></span>
             </a>

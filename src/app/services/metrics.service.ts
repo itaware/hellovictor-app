@@ -8,6 +8,7 @@ export class MetricsService {
 
   constructor() {
     if (detectIE() > 10) {
+      try {
       this.intersectionObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.intersectionRatio > 0.5) {
@@ -20,6 +21,9 @@ export class MetricsService {
       }, {
           threshold: [0.5]
         });
+      } catch (e) {
+        console.log(e);
+      }
     }
   }
 
