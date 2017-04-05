@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { QuoteService } from "../quote.service";
 
 @Component({
@@ -8,9 +8,10 @@ import { QuoteService } from "../quote.service";
 })
 export class HabitationAddOnComponent implements OnInit {
 
-  constructor(public quoteService: QuoteService) { }
+  constructor(public quoteService: QuoteService, private element: ElementRef) { }
 
   ngOnInit() {
+    this.element.nativeElement.scrollIntoView();
   }
 
 }

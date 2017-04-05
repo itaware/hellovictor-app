@@ -1,9 +1,9 @@
 import * as moment from 'moment';
 
   enum TYPE {
-    DIGITAL,
-    LEISURE,
-    PRECIOUS
+    DIGITAL = 1,
+    LEISURE = 2,
+    PRECIOUS = 3
   }
 
 export class ValuableItem {
@@ -74,7 +74,7 @@ export class ValuableItem {
   }
 
   calculDepreciation() {
-    let d = moment().diff(moment(this.purchaseDate, 'DDMMYYYY'), 'months');
+    const d = moment().diff(moment(this.purchaseDate, 'DDMMYYYY'), 'months');
     this.depreciation = 1;
     if (d > 24) {
       this.depreciation = .4;

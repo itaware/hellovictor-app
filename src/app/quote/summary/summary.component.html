@@ -44,6 +44,8 @@
                   <a (click)="getValuableItem(vi)" class="row-content-left cart-item-label">
                     <div class="row-content">
                       <span class="text-lg text-semibold">{{vi.name}}</span>
+                      <br>
+                      <span class="text-xs">{{vi.typeDescription()}}</span>
                     </div>
                   </a>
                   <a (click)="getValuableItem(vi)" class="row-content-right">

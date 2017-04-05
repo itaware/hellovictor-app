@@ -19,7 +19,7 @@ export class ValuableItemComponent implements OnInit {
     this.element.nativeElement.scrollIntoView();
     this.origin = this.route.snapshot.params.origin;
     if (!this.quoteService.valuableItem.type) {
-      this.quoteService.valuableItem.type = this.route.snapshot.params.type;
+      this.quoteService.valuableItem.type = +this.route.snapshot.params.type;
     }
   }
 
