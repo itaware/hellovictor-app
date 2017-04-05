@@ -1,13 +1,13 @@
 
 export class Habitation {
     type: string;
-    rooms: number = 0;
-    value: number = 0;
+    rooms = 1;
+    value = 5000;
     address: string;
     city: string;
     zipCode: string;
     square: string;
-    floor: string;
+    floor = 1;
     insuranceOptions: any = {
         replacementNew: { state: true, cost: 1.3 },
         dependency: { state: false, cost: 0.8 },
@@ -16,7 +16,7 @@ export class Habitation {
         alarm: { state: true, cost: 2.3 },
         deductible: { state: false, cost: 2 }
     };
-    premium: number = 0;
+    premium = 0;
 
     constructor(type: string) {
         this.type = 'renter';

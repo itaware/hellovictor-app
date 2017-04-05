@@ -1,45 +1,11 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~@angular/material/core/theming/all-theme';
-
-
 @import 'styles/_base_variables';
 @import 'styles/twemoji-awesome';
 //@import '~normalize.css/normalize';
+
 /*** angular ***/
-
-$mat-blue: (
-  50: #e3f2fd,
-  100: #bbdefb,
-  200: #90caf9,
-  300: #64b5f6,
-  400: #42a5f5,
-  500: $shakespeare,
-  600: #1e88e5,
-  700: #1976d2,
-  800: #1565c0,
-  900: #0d47a1,
-  A100: #82b1ff,
-  A200: #448aff,
-  A400: #2979ff,
-  A700: #2962ff,
-  contrast: (
-    50: $black-87-opacity,
-    100: $black-87-opacity,
-    200: $black-87-opacity,
-    300: $black-87-opacity,
-    400: $black-87-opacity,
-    500: white,
-    600: white,
-    700: white,
-    800: $white-87-opacity,
-    900: $white-87-opacity,
-    A100: $black-87-opacity,
-    A200: white,
-    A400: white,
-    A700: white,
-  )
-);
-
+$mat-blue: ( 50: #e3f2fd, 100: #bbdefb, 200: #90caf9, 300: #64b5f6, 400: #42a5f5, 500: $shakespeare, 600: #1e88e5, 700: #1976d2, 800: #1565c0, 900: #0d47a1, A100: #82b1ff, A200: #448aff, A400: #2979ff, A700: #2962ff, contrast: ( 50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: $black-87-opacity, 400: $black-87-opacity, 500: white, 600: white, 700: white, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: white));
 @include mat-core();
 $primary: mat-palette($mat-blue, 500, A100, A400);
 $accent: mat-palette($mat-blue, 600, A100, A400);
@@ -47,7 +13,6 @@ $warn: mat-palette($mat-red, 600);
 $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 /**  endangular **/
-
 
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import '~bootstrap-material-design/sass/bootstrap-material-design';
@@ -72,24 +37,21 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @import 'styles/parts/object';
 @import 'styles/parts/anim';
 @import 'styles/parts/block-home';
-
 //@import '~fancybox/dist/css/jquery.fancybox';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Work+Sans:300,400,500,600,700|Raleway:300');
 //@import 'fonts/fonts.css';
-
-
 @font-face {
-	font-family: 'emoji';
-	src:  local('Android Emoji');
-	src:  local('NotoColorEmoji');
-	src:  local('NotoColorEmoji.ttf');
-	src:  local('/system/fonts/NotoColorEmoji.ttf');
-	src:  local('Noto Color Emoji');
-	src:  local('Android Emoji');
+  font-family: 'emoji';
+  src: local('Android Emoji');
+  src: local('NotoColorEmoji');
+  src: local('NotoColorEmoji.ttf');
+  src: local('/system/fonts/NotoColorEmoji.ttf');
+  src: local('Noto Color Emoji');
+  src: local('Android Emoji');
   unicode-range: U+1F44D, U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
 }
 
-.emoji{
+.emoji {
   font-family: emoji, sans-serif, quiviraregular;
 }
 
@@ -106,29 +68,30 @@ body {
   font-family: $font-sans-serif;
   font-weight: 300;
 }
-body:not(.home){
-    .main-content {
-      min-height: 680px;
-    }
+
+body:not(.home) {
+  .main-content {
+    min-height: 680px;
+  }
 }
 
 .page-basic {
-  .page-content{
+  .page-content {
     padding-bottom: 80px;
   }
-  .page-header{
+  .page-header {
     padding: 30px 0;
     border: 0;
   }
-  .page-title{
+  .page-title {
     font-weight: 500;
     margin-bottom: 30px;
   }
 }
 
 md-dialog-container.mat-dialog-container {
-    padding: 0;
-    max-width: 100%;
+  padding: 0;
+  max-width: 100%;
 }
 
 // Styling on warning for users on IE7 or below

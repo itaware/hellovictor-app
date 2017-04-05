@@ -57,17 +57,20 @@
           </div>
           <div class="group-container">
             <div class="group-container-title text-lg">À quel étage ?</div>
-            <md-slider [(ngModel)]="quoteService.habitation.floor" class="habitation-floor" min="1" max="50" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
+            <div class="inline">
+            <md-slider [(ngModel)]="quoteService.habitation.floor" class="habitation-floor" min="1" max="6" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
+            <span>et +</span>
+            </div>
           </div>
           <div class="group-container">
-            <div class="group-container-title text-lg">Combien de pièces il y a ?</div>
+            <div class="group-container-title text-lg">Combien de pièces ?</div>
             <md-slider [(ngModel)]="quoteService.habitation.rooms" class="habitation-rooms" min="1" max="5" step="1" value="1" thumb-label="true" tick-interval="1" (change)="quoteService.calculAmount()"></md-slider>
           </div>
           <div class="group-container container-slider-lg">
             <div class="group-container-title text-lg">
               Approximativement quelle valeur pour votre mobilier ?
             </div>
-            <md-slider [(ngModel)]="quoteService.habitation.value" class="habitation-value" min="5000" max="50000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
+            <md-slider [(ngModel)]="quoteService.habitation.value" class="habitation-value" min="1000" max="80000" step="1000" value="5000" thumb-label="true" tick-interval="5000" (change)="quoteService.calculAmount()"></md-slider>
             <p class="text-xs"><i>Une fois votre contrat signé vous pourrez ajuster cette valeur en joignant les factures et/ou photos de vos biens</i></p>
           </div>
           <div class="group-container">
