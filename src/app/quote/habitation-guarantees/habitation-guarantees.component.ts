@@ -1,4 +1,4 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ElementRef } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 
 @Component({
@@ -10,9 +10,10 @@ import { routerTransition } from '../../router.animations';
 export class HabitationGuaranteesComponent implements OnInit {
   @HostBinding('@routeAnimation') routeAnimation = true;
 
-  constructor() { }
+  constructor(private element: ElementRef) { }
 
   ngOnInit() {
+    this.element.nativeElement.scrollIntoView();
   }
 
 }
