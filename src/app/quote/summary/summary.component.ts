@@ -36,7 +36,12 @@ export class SummaryComponent implements OnInit {
   }
 
   deleteHabitation() {
-    this.quoteService.habitation = null;
+    const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.quoteService.habitation = null;
+      }
+    });
   }
 }
 
@@ -49,5 +54,5 @@ export class SummaryComponent implements OnInit {
 </div></div>`
 })
 export class ConfirmDeteteDialogComponent {
-  constructor(public dialogRef: MdDialogRef<ConfirmDeteteDialogComponent>) {}
+  constructor(public dialogRef: MdDialogRef<ConfirmDeteteDialogComponent>) { }
 }
