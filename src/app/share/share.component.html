@@ -1,0 +1,25 @@
+<div class="block-share text-center">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{params.facebook.url}}" target="_blank" id="partage_facebook">
+    <span *ngIf="icon" class="icon icon-facebook"></span>
+    <img *ngIf="!icon" src="/assets/images/facebook.svg" alt="" style="height: 30px">
+  </a>
+  <a href="https://twitter.com/intent/tweet/?url={{params.twitter.url}}&text={{params.twitter.msg}}"
+    target="_blank" id="partage_twitter">
+    <span *ngIf="icon" class="icon icon-twitter"></span>
+    <img *ngIf="!icon" src="/assets/images/twitter.svg" alt="" style="height: 30px">
+  </a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url={{params.linkedin.url}}&title={{params.linkedin.title}}&summary={{params.linkedin.summary}}"
+    id="partage_linkedin" target="_blank">
+    <span *ngIf="icon" class="icon icon-linkedin"></span>
+    <img *ngIf="!icon" src="/assets/images/linkedin.svg" alt="" style="height: 30px">
+  </a>
+  <a href="https://plus.google.com/share?url={{params.gplus.url}}}}&hl=fr" target="_blank" id="partage_gplus">
+    <span *ngIf="icon" class="icon icon-googleplus"></span>
+    <img *ngIf="!icon" src="/assets/images/google+.svg" alt="" style="height: 30px">
+  </a>
+  <a href="mailto:?subject={{params.mail.subject}}&body={{params.mail.body}}"
+    target="_blank" id="partage_mail">
+    <span *ngIf="icon" class="icon icon-email"></span>
+    <img *ngIf="!icon" src="/assets/images/email.svg" alt="" style="height: 30px">
+  </a>
+</div>

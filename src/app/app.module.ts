@@ -29,6 +29,7 @@ import { MetricsService } from './services/metrics.service';
 import { PageTransitionComponent } from './page-transition/page-transition.component';
 import { DatepickerComponent } from './utils/datepicker/datepicker.component';
 import { UncompleteDialogComponent } from './quote/uncomplete-dialog/uncomplete-dialog.component';
+import { ShareComponent } from './share/share.component';
 
 @NgModule({
   imports: [
@@ -62,7 +63,8 @@ import { UncompleteDialogComponent } from './quote/uncomplete-dialog/uncomplete-
     PageTransitionComponent,
     DatepickerComponent,
     UncompleteDialogComponent,
-    ConfirmDeteteDialogComponent
+    ConfirmDeteteDialogComponent,
+    ShareComponent
   ],
   entryComponents: [
     VideoDialogComponent,
