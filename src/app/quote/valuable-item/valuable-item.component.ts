@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 import { QuoteService } from '../quote.service';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import * as moment from 'moment';
+import { MdDialog, MdDialogRef } from '@angular/material';
+import { UncompleteDialogComponent } from '../uncomplete-dialog/uncomplete-dialog.component';
 
 @Component({
   selector: 'hv-valuable-item',
@@ -12,7 +14,12 @@ export class ValuableItemComponent implements OnInit {
   origin: string;
   private _purchaseDate: Date;
 
-  constructor(private router: Router, private route: ActivatedRoute, public quoteService: QuoteService, private element: ElementRef) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    public quoteService: QuoteService,
+    private element: ElementRef,
+    public dialog: MdDialog) {
   }
 
   ngOnInit() {
@@ -24,8 +31,12 @@ export class ValuableItemComponent implements OnInit {
   }
 
   validate() {
-    this.quoteService.addValuableItem();
-    this.router.navigate(['/quote/summary']);
+    if (!this.quoteService.valuableItem.name || !this.quoteService.valuableItem.purchaseAmount || !this.quoteService.valuableItem.purchaseDate) {
+      this.uncomplete();
+    } else {
+      this.quoteService.addValuableItem();
+      this.router.navigate(['/quote/summary']);
+    }
   }
 
   goBack() {
@@ -59,6 +70,11 @@ export class ValuableItemComponent implements OnInit {
     this._purchaseDate = date;
     this.quoteService.valuableItem.purchaseDate = moment(date).format('DD/MM/YYYY');
     this.quoteService.calculAmount();
+  }
+
+  uncomplete() {
+    const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
+    dialogContent.componentInstance.message = 'Pour valider il nous faut au moins un nom, un montant et une date d\'achat SVP';
   }
 
 }

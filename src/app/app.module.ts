@@ -17,7 +17,7 @@ import { QuoteService } from './quote/quote.service';
 import { QuoteComponent } from './quote/quote.component';
 import { HabitationComponent } from './quote/habitation/habitation.component';
 import { HabitationAddOnComponent } from './quote/habitation-add-on/habitation-add-on.component';
-import { SummaryComponent } from './quote/summary/summary.component';
+import { SummaryComponent, ConfirmDeteteDialogComponent } from './quote/summary/summary.component';
 import { SubscribtionComponent } from './quote/subscribtion/subscribtion.component';
 import { ValuableItemComponent } from './quote/valuable-item/valuable-item.component';
 import { ValuableItemsComponent } from './quote/valuable-items/valuable-items.component';
@@ -28,6 +28,7 @@ import { FinishComponent } from './quote/finish/finish.component';
 import { MetricsService } from './services/metrics.service';
 import { PageTransitionComponent } from './page-transition/page-transition.component';
 import { DatepickerComponent } from './utils/datepicker/datepicker.component';
+import { UncompleteDialogComponent } from './quote/uncomplete-dialog/uncomplete-dialog.component';
 
 @NgModule({
   imports: [
@@ -59,10 +60,14 @@ import { DatepickerComponent } from './utils/datepicker/datepicker.component';
     VideoDialogComponent,
     FinishComponent,
     PageTransitionComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    UncompleteDialogComponent,
+    ConfirmDeteteDialogComponent
   ],
   entryComponents: [
-    VideoDialogComponent
+    VideoDialogComponent,
+    UncompleteDialogComponent,
+    ConfirmDeteteDialogComponent
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR'},

@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { QuoteService } from '../quote.service';
 import { Router } from '@angular/router';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
   selector: 'hv-summary',
@@ -9,7 +10,12 @@ import { Router } from '@angular/router';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor(private router: Router, public quoteService: QuoteService, private element: ElementRef) { }
+
+  constructor(
+    private router: Router,
+    public quoteService: QuoteService,
+    private element: ElementRef,
+    private dialog: MdDialog) { }
 
   ngOnInit() {
     this.element.nativeElement.scrollIntoView();
@@ -21,10 +27,26 @@ export class SummaryComponent implements OnInit {
   }
 
   delete(vi) {
-    this.quoteService.valuableItems.splice(this.quoteService.valuableItems.indexOf(vi), 1);
+    const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.quoteService.valuableItems.splice(this.quoteService.valuableItems.indexOf(vi), 1);
+      }
+    });
   }
 
   deleteHabitation() {
     this.quoteService.habitation = null;
   }
+}
+
+@Component({
+  template: `<div md-dialog-content>Voulez-vous vraiment supprimer ?</div>
+<div md-dialog-actions>
+  <button md-button (click)="dialogRef.close(true)">Oui</button>
+  <button md-button (click)="dialogRef.close(false)">Non</button>
+</div>`
+})
+export class ConfirmDeteteDialogComponent {
+  constructor(public dialogRef: MdDialogRef<ConfirmDeteteDialogComponent>) {}
 }
