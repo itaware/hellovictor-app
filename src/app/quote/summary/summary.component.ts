@@ -41,11 +41,12 @@ export class SummaryComponent implements OnInit {
 }
 
 @Component({
-  template: `<div md-dialog-content>Voulez-vous vraiment supprimer ?</div>
+  template: `<div class="text-center"><div class="material-icons text-primary icon-alone-md">info_outline</div>
+  <div md-dialog-content><p>Voulez-vous vraiment supprimer ?</p></div>
 <div md-dialog-actions>
-  <button md-button (click)="dialogRef.close(true)">Oui</button>
-  <button md-button (click)="dialogRef.close(false)">Non</button>
-</div>`
+  <button md-button (click)="dialogRef.close(true)" class="btn btn-raised btn-primary">Oui</button>
+  <button md-button (click)="dialogRef.close(false)" class="btn btn-raised btn-default">Non</button>
+</div></div>`
 })
 export class ConfirmDeteteDialogComponent {
   constructor(public dialogRef: MdDialogRef<ConfirmDeteteDialogComponent>) {}

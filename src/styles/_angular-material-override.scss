@@ -80,3 +80,14 @@
     background-color: $brand-info;
   }
 }
+
+md-dialog-container.mat-dialog-container {
+  padding: 20px 50px;
+  margin:auto;
+  max-width: 80%;
+
+  .mat-dialog-actions:last-child{
+    margin-bottom: 0;
+  }
+
+}
