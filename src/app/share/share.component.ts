@@ -10,23 +10,23 @@ export class ShareComponent implements OnInit {
 
   params = {
     linkedin: {
-      url: encodeURI('https://goo.gl/4gy7Wc'),
-      title: encodeURI('L\'assurance 100% numérique'),
-      summary: encodeURI('Une assurance 100% numérique qui couvre tous vos objets #insurtech')
+      url: encodeURIComponent('https://goo.gl/4gy7Wc'),
+      title: encodeURIComponent('L\'assurance 100% numérique'),
+      summary: encodeURIComponent('J’ai pensé qu’Hello Victor http://hellovictor.fr pourrait vous intéresser. C’est une assurance 100% numérique qui couvre vos objets (ex: enceintes, guitares, vélo, smartphone ...), bref vos biens, votre logement. Hello Victor calcul une police d’assurance au juste prix et rembourse rapidement en cas de sinistre. Si vous êtes soigneux, attentionné ou comme je le pense simplement né sous une bonne étoile alors vous payerez votre assurance moins cher. Hello Victor est la 1ère assurance à proposer un bonus / malus pour vos objets et votre habitation. Ne payez plus le plein tarif toute votre vie sans avoir jamais eu de sinistre. #Insurtech #assurance #HelloVictor')
     },
     facebook: {
-      url: encodeURI('https://goo.gl/SPLfiU')
+      url: encodeURIComponent('https://goo.gl/SPLfiU')
     },
     twitter: {
-      url: encodeURI('https://goo.gl/jOlqSX'),
-      msg: encodeURI('Hello Victor est une assurance 100% numérique qui couvre tous vos objets #insurtech')
+      url: encodeURIComponent('https://goo.gl/jOlqSX'),
+      msg: encodeURIComponent('Hello Victor est une assurance 100% numérique qui couvre tous vos objets #insurtech')
     },
     gplus: {
-      url: encodeURI('https://goo.gl/ZixcFo')
+      url: encodeURIComponent('https://goo.gl/ZixcFo')
     },
     mail: {
-      subject: encodeURI('Hello Victor, l\'assurance 100% numérique'),
-      body: encodeURI(`Hello,
+      subject: encodeURIComponent('Hello Victor, l\'assurance 100% numérique'),
+      body: encodeURIComponent(`Hello,
     
 J’ai pensé qu’Hello Victor http://hellovictor.fr pourrait t’intéresser. C’est une assurance 100% numérique qui couvre tes objets (ex: enceintes, guitares, vélo, smartphone ...), bref tes biens, ton appart. 
 Hello Victor calcul une police d’assurance au juste prix et rembourse rapidement en cas de sinistre.

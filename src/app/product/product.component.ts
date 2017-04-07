@@ -13,7 +13,12 @@ export class ProductComponent implements OnInit, AfterViewInit {
   page = 'objets';
   @ViewChildren('observe') observedElements: QueryList<any>;
 
-  constructor(private router: Router, private route: ActivatedRoute, private dialog: MdDialog, private element: ElementRef, private metricsService: MetricsService) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private dialog: MdDialog,
+    private element: ElementRef,
+    private metricsService: MetricsService) {
     this.router.events
       .filter(event => event instanceof NavigationEnd)
       .subscribe((event) => {
@@ -30,9 +35,9 @@ export class ProductComponent implements OnInit, AfterViewInit {
 
   openVideo() {
     this.dialog.open(VideoDialogComponent, {
-height: '80vh',
-  width: '80%',
-});
+      height: '80vh',
+      width: '80%',
+    });
   }
 
   goToQuote() {

@@ -74,7 +74,7 @@ export class ValuableItemComponent implements OnInit {
 
   uncomplete() {
     const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
-    dialogContent.componentInstance.message = 'Pour valider il nous faut au moins un nom, un montant et une date d\'achat SVP';
+    dialogContent.componentInstance.message = 'Pour valider il nous faut au moins un <b>nom</b>, un <b>montant</b> et une <b>date d\'achat</b> SVP';
   }
 
 }
