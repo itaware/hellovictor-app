@@ -10,12 +10,12 @@ import { ValuableItemComponent } from './quote/valuable-item/valuable-item.compo
 import { ValuableItemGuaranteesComponent } from './quote/valuable-item-guarantees/valuable-item-guarantees.component';
 import { ValuableItemsComponent } from './quote/valuable-items/valuable-items.component';
 import { ValuableItemsSummaryComponent } from './quote/valuable-items-summary/valuable-items-summary.component';
-import { HomeComponent } from "./home/home.component";
-import { ValuableItemPageComponent } from "./product/valuable-item-page/valuable-item-page.component";
-import { HabitationPageComponent } from "./product/habitation-page/habitation-page.component";
-import { HabitationGuaranteesComponent } from "./quote/habitation-guarantees/habitation-guarantees.component";
-import { ProductComponent } from "./product/product.component";
-import { FinishComponent } from "./quote/finish/finish.component";
+import { HomeComponent } from './home/home.component';
+import { ValuableItemPageComponent } from './product/valuable-item-page/valuable-item-page.component';
+import { HabitationPageComponent } from './product/habitation-page/habitation-page.component';
+import { HabitationGuaranteesComponent } from './quote/habitation-guarantees/habitation-guarantees.component';
+import { ProductComponent } from './product/product.component';
+import { FinishComponent } from './quote/finish/finish.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
