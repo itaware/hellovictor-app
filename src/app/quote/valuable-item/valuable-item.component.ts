@@ -13,6 +13,7 @@ import { UncompleteDialogComponent } from '../uncomplete-dialog/uncomplete-dialo
 export class ValuableItemComponent implements OnInit {
   origin: string;
   private _purchaseDate: Date;
+  private isDialogOpen = false;
 
   constructor(
     private router: Router,
@@ -73,8 +74,12 @@ export class ValuableItemComponent implements OnInit {
   }
 
   uncomplete() {
-    const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
-    dialogContent.componentInstance.message = 'Pour valider il nous faut au moins un <b>nom</b>, un <b>montant</b> et une <b>date d\'achat</b> SVP';
+    if (!this.isDialogOpen) {
+      const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
+      dialogContent.componentInstance.message = 'Pour valider il nous faut au moins un <b>nom</b>, un <b>montant</b> et une <b>date d\'achat</b> SVP';
+      this.isDialogOpen = true;
+      dialogContent.afterClosed().subscribe(() => this.isDialogOpen = false);
+    }
   }
 
 }

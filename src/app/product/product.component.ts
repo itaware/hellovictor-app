@@ -37,6 +37,7 @@ export class ProductComponent implements OnInit, AfterViewInit {
   openVideo() {
     this.dialog.open(VideoDialogComponent, {
       width: '80%',
+      //overlayClass: 'video-dialog'
     });
   }
 

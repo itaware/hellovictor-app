@@ -19,8 +19,13 @@ export class QuoteService {
   habitation: Habitation;
   valuableItems: Array<ValuableItem> = [];
   amount = 0;
+  fillBegin: Date;
+  fillEnd: Date;
+  fillDuration: number;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {
+    this.fillBegin = new Date();
+  }
 
   calculAmount() {
     this.amount = 0;
@@ -45,6 +50,9 @@ export class QuoteService {
   }
 
   sendQuote() {
+    this.fillEnd = new Date();
+    this.fillDuration = (this.fillEnd.getTime() - this.fillBegin.getTime()) / 1000;
+
     this.http.post('/api/quote', JSON.stringify(this), OPTIONS)
       .map((res: Response) => {
         console.log(res);
@@ -62,6 +70,9 @@ export class QuoteService {
     return {
       firstName: this.firstName,
       lastName: this.lastName,
+      fillBegin: this.fillBegin,
+      fillEnd: this.fillEnd,
+      fillDuration: this.fillDuration,
       email: this.email,
       habitation: JSON.stringify(this.habitation),
       valuableItems: JSON.stringify(this.valuableItems),

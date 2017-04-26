@@ -11,6 +11,7 @@ import { UncompleteDialogComponent } from '../uncomplete-dialog/uncomplete-dialo
   styleUrls: ['./subscribtion.component.scss']
 })
 export class SubscribtionComponent implements OnInit {
+  private isDialogOpen = false;
 
   constructor(
     private router: Router,
@@ -31,8 +32,12 @@ export class SubscribtionComponent implements OnInit {
   }
 
   uncomplete() {
-    const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
-    dialogContent.componentInstance.message = 'Pour valider il nous faut au moins votre <b>email</b> SVP';
+    if (!this.isDialogOpen) {
+      const dialogContent: MdDialogRef<UncompleteDialogComponent> = this.dialog.open(UncompleteDialogComponent);
+      dialogContent.componentInstance.message = 'Pour valider il nous faut au moins votre <b>email</b> SVP';
+      this.isDialogOpen = true;
+      dialogContent.afterClosed().subscribe(() => this.isDialogOpen = false);
+    }
   }
 
 }

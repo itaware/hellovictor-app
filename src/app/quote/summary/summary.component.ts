@@ -9,7 +9,7 @@ import { MdDialog, MdDialogRef } from '@angular/material';
   styleUrls: ['./summary.component.scss']
 })
 export class SummaryComponent implements OnInit {
-
+  private isDialogOpen: boolean;
 
   constructor(
     private router: Router,
@@ -27,25 +27,34 @@ export class SummaryComponent implements OnInit {
   }
 
   delete(vi) {
-    const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.quoteService.valuableItems.splice(this.quoteService.valuableItems.indexOf(vi), 1);
-      }
-    });
+    if (!this.isDialogOpen) {
+      this.isDialogOpen = true;
+      const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
+      dialogRef.afterClosed().subscribe(result => {
+        this.isDialogOpen = false;
+        if (result) {
+          this.quoteService.valuableItems.splice(this.quoteService.valuableItems.indexOf(vi), 1);
+        }
+      });
+    }
   }
 
   deleteHabitation() {
-    const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.quoteService.habitation = null;
-      }
-    });
+    if (!this.isDialogOpen) {
+      this.isDialogOpen = true;
+      const dialogRef = this.dialog.open(ConfirmDeteteDialogComponent);
+      dialogRef.afterClosed().subscribe(result => {
+        this.isDialogOpen = false;
+        if (result) {
+          this.quoteService.habitation = null;
+        }
+      });
+    }
   }
 }
 
 @Component({
+  selector: 'hv-confirm-delete-dialog',
   template: `<div class="text-center"><div class="material-icons text-primary icon-alone-md">info_outline</div>
   <div md-dialog-content><p>Voulez-vous vraiment supprimer ?</p></div>
 <div md-dialog-actions>
