@@ -19,7 +19,7 @@ export class ValuableItemGuaranteesComponent implements OnInit {
     if (this.origin === 'objets') {
       this.router.navigate(['/quote/valuable-item', 0, 'objets']);
     } else {
-      this.router.navigate(['/quote/valuable-item/habitation'])
+      this.router.navigate(['/quote/valuable-item', 'habitation', this.origin]);
     }
   }
 

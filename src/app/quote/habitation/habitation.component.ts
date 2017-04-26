@@ -41,4 +41,8 @@ export class HabitationComponent implements OnInit {
     dialogContent.componentInstance.message = 'Pour valider il nous faut au moins votre <b>ville</b> et <b>quartier</b> d\'habitation SVP';
   }
 
+  goBack() {
+    this.router.navigate(['/product/habitation']).then(() => this.quoteService.habitation = null);
+  }
+
 }
