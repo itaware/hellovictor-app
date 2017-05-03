@@ -51,6 +51,11 @@ export class SummaryComponent implements OnInit {
       });
     }
   }
+
+  validAnonymousQuote() {
+    this.quoteService.sendQuote();
+    this.router.navigate(['/home']);
+  }
 }
 
 @Component({

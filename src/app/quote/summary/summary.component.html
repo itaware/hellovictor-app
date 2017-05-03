@@ -63,8 +63,16 @@
           </div>
         </div>
 
-        <div class="text-lg">
-          <b>Avez-vous autre chose à assurer ?</b>
+        <div class="container-fluid">
+          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block" id="summary-valid">
+            J'envoie
+          </a>
+          <a (click)="validAnonymousQuote()" class="center-block text-center" id="summary-cancel">Non merci, ça ne m'intéresse pas finalement</a>
+        </div>
+
+        <div class="container-fluid text-center">
+          <br>
+          <b>ou encore autre chose à assurer ?</b>
           <br>
           <span class="text-xs">(si oui sélectionnez une des catégories ci-dessous)</span>
         </div>
@@ -153,12 +161,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="container-fluid">
-          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block" id="summary-valid">
-            Je valide mon devis
-          </a>
-          <a routerLink="/home" class="center-block text-center" id="summary-cancel">Non merci, ça ne m'intéresse pas</a>
         </div>
       </div>
 
