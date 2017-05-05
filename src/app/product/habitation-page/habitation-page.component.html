@@ -26,7 +26,7 @@
       <div class="block-img col-xs-12 col-sm-6 container-cover">
         <div class="cover block-anim">
           <div class="anim-zoom">
-            <img src="{{baseUrl}}images/product/habitation/studio.png" alt="Studio" />
+            <img src="{{baseUrl}}images/product/habitation/studio.png" alt="Studio" id="anchor"/>
           </div>
         </div>
         <div class="icon-desc text-center cover-content">
@@ -43,6 +43,9 @@
               <div class="text-sup currency">€</div>
               <div class="periodicity">/mois</div>
             </div>
+          </div>
+          <div class="text-center block-text-button">
+            <a (click)="loadQuote('studio')" class="btn btn-info btn-lg btn-raised" id="studio-click2">Calculer mon tarif</a>
           </div>
         </div>
       </div>
@@ -89,6 +92,9 @@
               <div class="periodicity">/mois</div>
             </div>
           </div>
+          <div class="text-center block-text-button">
+            <a (click)="loadQuote('flat')" class="btn btn-info btn-lg btn-raised" id="appartement-click2">Calculer mon tarif</a>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-6 block-text valign-top" #observe id="appartement">
@@ -126,6 +132,9 @@
               <div class="text-sup currency">€</div>
               <div class="periodicity">/mois</div>
             </div>
+          </div>
+          <div class="text-center block-text-button">
+            <a (click)="loadQuote('flat')" class="btn btn-info btn-lg btn-raised" id="appartement-click2">Calculer mon tarif</a>
           </div>
         </div>
       </div>

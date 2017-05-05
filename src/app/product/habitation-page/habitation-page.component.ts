@@ -18,7 +18,7 @@ export class HabitationPageComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.element.nativeElement.scrollIntoView();
+    this.element.nativeElement.ownerDocument.getElementById('anchor').scrollIntoView();
   }
 
   ngAfterViewInit() {
