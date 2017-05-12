@@ -35,7 +35,7 @@ export class Server {
         // set default view directory
         this.app.set('views', 'src');
         // handle requests for routes in the app.  ngExpressEngine does the rendering.
-        this.app.get(['/', '/home', '/product/habitation', '/product/valuable-item'], (req, res) => {
+        this.app.get(['/', '/home', '/habitation', '/valuable-item'], (req, res) => {
             res.render('index', { req });
         });
         // handle requests for static files

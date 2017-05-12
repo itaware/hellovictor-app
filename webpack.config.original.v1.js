@@ -250,7 +250,7 @@ module.exports = {
     }),
     new ExtractTextPlugin({
       "filename": "[name].bundle.css",
-      "disable": true
+      "disable": false
     }),
     new LoaderOptionsPlugin({
       "sourceMap": false,

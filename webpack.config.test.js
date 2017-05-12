@@ -37,6 +37,7 @@ module.exports = {
   },
   "entry": {
     "main": [
+      "./src/uni/app.server.ts",
       "./src/uni/universal-engine.ts"
     ],
   },

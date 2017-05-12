@@ -47,7 +47,7 @@ export class HabitationComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/product/habitation']).then(() => this.quoteService.habitation = null);
+    this.router.navigate(['/habitation']).then(() => this.quoteService.habitation = null);
   }
 
 }

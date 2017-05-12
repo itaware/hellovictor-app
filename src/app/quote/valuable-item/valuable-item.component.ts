@@ -42,7 +42,7 @@ export class ValuableItemComponent implements OnInit {
 
   goBack() {
     if (this.origin === 'objets') {
-      this.router.navigate(['/product/valuable-item']);
+      this.router.navigate(['/valuable-item']);
     } else {
       this.router.navigate(['/quote/summary']);
     }
