@@ -1,6 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { QuoteService } from '../../quote/quote.service';
 import { Habitation } from '../../quote/habitation';
 import { MetricsService } from '../../services/metrics.service';
 
@@ -14,7 +13,7 @@ export class HabitationPageComponent implements OnInit, AfterViewInit {
   @ViewChildren('observe') observedElements: QueryList<any>;
 
 
-  constructor(private router: Router, public quoteService: QuoteService, private element: ElementRef, private metricsService: MetricsService) {
+  constructor(private router: Router, private element: ElementRef, private metricsService: MetricsService) {
   }
 
   ngOnInit() {

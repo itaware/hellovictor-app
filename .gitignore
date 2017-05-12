@@ -4,6 +4,7 @@
 /dist
 /build
 /tmp
+/universal
 
 # dependencies
 /node_modules

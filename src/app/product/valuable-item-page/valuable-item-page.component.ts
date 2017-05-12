@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
-import { QuoteService } from '../../quote/quote.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MetricsService } from '../../services/metrics.service';
 
@@ -15,7 +14,6 @@ export class ValuableItemPageComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    public quoteService: QuoteService,
     private element: ElementRef,
     private metricsService: MetricsService) {
   }

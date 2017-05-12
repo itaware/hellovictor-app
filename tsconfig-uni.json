@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "outDir": "./universal",
+    "target": "es5",
+    "module": "es2015",
+    "noImplicitAny": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "node_modules/@types/"
+    ]
+  },
+  "files": [
+    "src/uni/app.server.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "universal/ngfactory",
+    "entryModule": "./src/app/app.module#AppModule",
+    "skipMetadataEmit": true
+  }
+}

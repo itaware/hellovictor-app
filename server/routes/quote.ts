@@ -1,14 +1,14 @@
 
 import { Router, Request, Response, NextFunction } from 'express';
-import { Injectable } from 'injection-js';
-import { DatastoreService } from '../services/datastore.service';
 import 'reflect-metadata';
+import { Injectable } from '@angular/core';
+import { DatastoreService } from '../services/datastore.service';
 
 @Injectable()
 export class Quote {
     uri = '/quote';
     router: Router = Router();
-    self: Quote = this;
+    self: Quote = this;
 
     constructor(private _datastore: DatastoreService) {
         this.router.get('/', this._get.bind(this));

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { MdDialog } from '@angular/material';
 import { MetricsService } from '../services/metrics.service';
 import { style } from '@angular/animations';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'hv-product',
@@ -17,7 +18,7 @@ export class ProductComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private dialog: MdDialog,
+    //private dialog: MdDialog,
     private element: ElementRef,
     private metricsService: MetricsService) {
     this.router.events
@@ -35,10 +36,10 @@ export class ProductComponent implements OnInit, AfterViewInit {
   }
 
   openVideo() {
-    this.dialog.open(VideoDialogComponent, {
-      width: '80%',
-      //overlayClass: 'video-dialog'
-    });
+    // this.dialog.open(VideoDialogComponent, {
+    //   width: '80%',
+    //   //overlayClass: 'video-dialog'
+    // });
   }
 
   goToQuote() {

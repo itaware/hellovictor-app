@@ -3,14 +3,15 @@
 
 //module dependencies
 var server = require("./build/server");
-var debug = require("debug")("express:server");
+//var debug = require("debug")("express:server");
 var http = require("http");
 
 //create http server
 var httpPort = normalizePort(process.env.PORT || 8080);
-var app = server.Server.bootstrap().app;
-app.set("port", httpPort);
-var httpServer = http.createServer(app);
+var s = server.Server.bootstrap();
+s.universalConfig(require('./universal/universal').ngUniversalEngine);
+s.app.set("port", httpPort);
+var httpServer = http.createServer(s.app);
 
 //listen on provided ports
 httpServer.listen(httpPort);
