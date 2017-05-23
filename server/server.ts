@@ -33,21 +33,10 @@ export class Server {
         this.app.engine('html', ngUniversalEngine());
         this.app.set('view engine', 'html');
         // set default view directory
-        this.app.set('views', 'src');
+        this.app.set('views', 'dist');
         // handle requests for routes in the app.  ngExpressEngine does the rendering.
         this.app.get(['/', '/home', '/habitation', '/valuable-item'], (req, res) => {
             res.render('index', { req });
-        });
-        // handle requests for static files
-        this.app.get(['/*.js', '/*.css'], (req, res, next) => {
-            let fileName: string = req.originalUrl;
-            console.log(fileName);
-            let root = fileName.startsWith('/node_modules/') ? '.' : 'src';
-            res.sendFile(fileName, { root: root }, function (err) {
-                if (err) {
-                    next(err);
-                }
-            });
         });
     }
 
