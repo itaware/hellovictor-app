@@ -29,10 +29,23 @@
             </md-input-container>
           </div>
         </div>
+    <div class="row">
+      <div class="group-container">
+        <div class="text-lg text-semibold">
+          <p>
+            <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">Voir</a> le détail de vos garanties <br/>
+            <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">
+              <span class="e1a-lg e1a-eye "></span>
+              <span class="e1a-lg e1a-crossed_swords"></span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
         <div class="row">
           <div class="group-container form-group">
             <p class="text-lg">Calculez la valeur de votre appareil</p>
-            <div class="text-md"><strong>En indiquand le prix ainsi que la date d'achat</strong></div>
+            <div class="text-md"><strong>En indiquant le prix ainsi que la date d'achat</strong></div>
           </div>
           <div class="group-container clearfix">
             <div class="row col-xs-10">
@@ -102,19 +115,6 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="group-container">
-        <div class="text-lg text-semibold">
-          <p>
-            <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">Voir</a> le détail de vos garanties <br/>
-            <a routerLink="/quote/valuable-item-guarantees/{{origin}}" id="valuable-item-guarantees-click">
-              <span class="e1a-lg e1a-eye "></span>
-              <span class="e1a-lg e1a-crossed_swords"></span>
-            </a>
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="container-fluid navbar navbar-fixed-bottom navbar-primary">
     <div class="pull-left padding-vertical">
@@ -130,7 +130,7 @@
         <a (click)="validate()" class="btn btn-primary btn-raised" id="valuable-item-valid">
           <span class="material-icons">done</span>
           <br/>
-          <div class="text-uppercase">Valider</div>
+          <div class="text-uppercase">Suivant</div>
         </a>
       </div>
     </div>

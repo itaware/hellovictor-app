@@ -51,7 +51,9 @@ export class ProductComponent implements OnInit, AfterViewInit {
   }
 
   scrollToDetail() {
-    this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
+    if (this.element.nativeElement.ownerDocument) {
+      this.element.nativeElement.ownerDocument.getElementById('detail').scrollIntoView();
+    }
   }
 
 }
