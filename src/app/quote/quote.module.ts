@@ -28,7 +28,7 @@ import { ShareComponent } from '../share/share.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     FlexLayoutModule,
     QuoteRoutingModule
  ],

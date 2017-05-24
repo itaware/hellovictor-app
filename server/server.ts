@@ -6,6 +6,7 @@ import 'reflect-metadata';
 import { ReflectiveInjector, Injectable } from '@angular/core';
 import { DatastoreService } from './services/datastore.service';
 import { enableProdMode } from '@angular/core';
+import * as compression from 'compression';
 
 @Injectable()
 export class Server {
@@ -23,6 +24,7 @@ export class Server {
 
     constructor(quote: Quote) {
         this.app = express();
+        this.app.use(compression());
         this.config();
         this.app.use('/api' + quote.uri, quote.getRouter());
     }

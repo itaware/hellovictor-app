@@ -86,6 +86,16 @@ module.exports = {
   "module": {
     "rules": [
       {
+        test: /@angular(\\|\/)material/,
+        loader: 'imports-loader',
+        options: {
+          window: '>global',
+          'CSS': '>null',
+          navigator: '>{get userAgent(){ return \'Chrome\'; }}',
+          document: '>global.document'
+        }
+      },
+      {
         "enforce": "pre",
         "test": /\.js$/,
         "loader": "source-map-loader",

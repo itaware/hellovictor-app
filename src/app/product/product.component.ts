@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit, AfterViewInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    //private dialog: MdDialog,
+    private dialog: MdDialog,
     private element: ElementRef,
     private metricsService: MetricsService) {
     this.router.events
@@ -36,10 +36,10 @@ export class ProductComponent implements OnInit, AfterViewInit {
   }
 
   openVideo() {
-    // this.dialog.open(VideoDialogComponent, {
-    //   width: '80%',
-    //   //overlayClass: 'video-dialog'
-    // });
+    this.dialog.open(VideoDialogComponent, {
+      width: '80%',
+      //overlayClass: 'video-dialog'
+    });
   }
 
   goToQuote() {
