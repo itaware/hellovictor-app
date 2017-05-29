@@ -63,10 +63,12 @@
 }
 .slogan {
   margin: 40px 0;
-  font-size: 64px;
+  font-size: 38px;
   line-height: 1.2;
   font-family: $font-sans-serif;
   font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
   @media(max-width: $screen-xs-max){
     font-size: 38px;
     padding: 0 15px;

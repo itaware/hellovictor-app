@@ -102,3 +102,30 @@ md-dialog-container.mat-dialog-container {
     margin-bottom: 0;
   }
 }
+
+.mat-toolbar-fixed-bottom{
+  position: fixed;
+  z-index: 500;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  font-family: unset;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.mat-raised-button {
+  &[disabled], &[disabled][disabled]{
+    background: rgba(#fff, 0.6);
+    font-size: 12px;
+    cursor: not-allowed;
+  }
+
+}
+
+.mat-lg-button{
+  padding: 5px 35px;
+  font-size: 20px;
+}

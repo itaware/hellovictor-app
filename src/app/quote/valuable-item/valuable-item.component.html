@@ -116,8 +116,8 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid navbar navbar-fixed-bottom navbar-primary">
-    <div class="pull-left padding-vertical">
+  <div class="container-fluid mat-toolbar-fixed-bottom mat-toolbar mat-primary padding-vertical">
+    <div class="pull-left">
       <div class="text-lg"><span class="text-semibold">Notre proposition</span>
         <div class="block-price text-xl">
           <span class="text-bold">{{quoteService.valuableItem.premium | number:'1.2-2'}}</span>
@@ -126,8 +126,8 @@
       </div>
     </div>
     <div class="pull-right">
-      <div class="row">
-        <a (click)="validate()" class="btn btn-primary btn-raised" id="valuable-item-valid">
+      <div class="">
+        <a (click)="validate()" class="mat-raised-button mat-primary text-center" id="valuable-item-valid">
           <span class="material-icons">done</span>
           <br/>
           <div class="text-uppercase">Suivant</div>

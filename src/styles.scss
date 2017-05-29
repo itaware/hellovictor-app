@@ -1,8 +1,9 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~@angular/material/_theming';
+@import '~@angular/material/theming';
 @import 'styles/_base_variables';
-@import 'styles/twemoji-awesome';
+//@import 'styles/twemoji-awesome';
 //@import '~normalize.css/normalize';
+@import 'styles/angular_static/material';
 
 /*** angular ***/
 $mat-blue: ( 50: #e3f2fd, 100: #bbdefb, 200: #90caf9, 300: #64b5f6, 400: #42a5f5, 500: $shakespeare, 600: #1e88e5, 700: #1976d2, 800: #1565c0, 900: #0d47a1, A100: #82b1ff, A200: #448aff, A400: #2979ff, A700: #2962ff, contrast: ( 50: $black-87-opacity, 100: $black-87-opacity, 200: $black-87-opacity, 300: $black-87-opacity, 400: $black-87-opacity, 500: white, 600: white, 700: white, 800: $white-87-opacity, 900: $white-87-opacity, A100: $black-87-opacity, A200: white, A400: white, A700: white));
@@ -14,10 +15,10 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);
 /**  endangular **/
 
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import '~bootstrap-material-design/sass/bootstrap-material-design';
-@import '~bootstrap-material-design/sass/ripples';
-@import '~emojione/assets/css/emojione-awesome';
+@import 'styles/bootstrap';
+// @import '~bootstrap-material-design/sass/bootstrap-material-design';
+// @import '~bootstrap-material-design/sass/ripples';
+@import 'styles/emojione/emojione-awesome';
 @import 'styles/_theme_variables';
 @import 'styles/_theme-mixins-variables';
 @import 'styles/iconfont';
@@ -41,6 +42,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @import 'styles/parts/block-share';
 //@import '~fancybox/dist/css/jquery.fancybox';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Work+Sans:300,400,500,600,700|Raleway:300');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 //@import 'fonts/fonts.css';
 @font-face {
   font-family: 'emoji';
@@ -90,7 +92,6 @@ body:not(.home) {
     margin-bottom: 30px;
   }
 }
-
 
 // Styling on warning for users on IE7 or below
 .browsehappy {
