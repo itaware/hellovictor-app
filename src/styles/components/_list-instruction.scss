@@ -1,0 +1,31 @@
+.list-instructions{
+  padding: 0 0 0 22px;
+  li{
+    position: relative;
+    padding-top: 2px;
+    padding-left: 45px;
+    padding-bottom: 30px;
+    list-style: none;
+    font-size: 18px;
+    &:after{
+      content: "";
+      display:block;
+      left: ($check-size / 2) - 1;
+      top: 0;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      border: 1px dashed #fff;
+    }
+    &:last-child{
+      &:after{content: none;}
+    }
+    .check{
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      background-color:  $atlantis;
+    }
+  }
+}

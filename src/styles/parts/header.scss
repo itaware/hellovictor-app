@@ -18,46 +18,9 @@
 .header-site {
   padding: 0 15px;
 
-  .header-site-top:before{
-    content: '';
-    position: absolute;
-    z-index: -2;
-    top:0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(255,255,255,0.7);
-  }
-
-  .baseline {
-    margin-top: 100px;
-      @media(max-width: $screen-xs-max) {
-        margin-top: 10px;
-      }
-    h2 {
-      @media(max-width: $screen-xs-max) {
-        font-size: 16px;
-      }
-    }
-    h3 {
-      @media(max-width: $screen-xs-max) {
-        font-size: 14px;
-      }
-    }
-  }
-  .block-btn{
-    margin: 2vh 0;
-  }
   @media(min-width: $breakpoint_mobile){
     .logo{
       padding-top: 50px;
-    }
-    .block-btn{
-      margin-top: 5vh;
-      margin-bottom: 5vh;
-    }
-    .baseline{
-      font-size: 20px;
     }
   }
 }
@@ -99,13 +62,7 @@
     transform: translateY(10%);
   }
 }
-.form-title {
-  @extend .slogan;
-  font-size: 44px;
-  @media(max-width: $screen-xs-max){
-    font-size: 18px;
-  }
-}
+
 
 .home{
   .header-site{

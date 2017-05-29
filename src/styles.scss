@@ -31,7 +31,8 @@ $theme: mat-light-theme($primary, $accent, $warn);
 @import 'styles/parts/section';
 @import 'styles/parts/steps';
 @import 'styles/parts/block-cover';
-@import 'styles/parts/timeline';
+@import 'styles/components/list-instruction';
+
 @import 'styles/parts/product';
 @import 'styles/parts/icon-desc';
 @import 'styles/parts/bubble-chat';
