@@ -72,6 +72,7 @@ label.control-label{
 }
 .form-group{
   @include clearfix();
+  margin-top: 28px;
 
   label,
   label.control-label{
@@ -103,6 +104,11 @@ label.control-label{
     &-title{
       padding: 10px 0px 10px 10px;
     }
+  }
+  &, &.panel-default{
+    >.panel-heading{
+      background-color: #eee;
+    } 
   }
 }
 .list-group{

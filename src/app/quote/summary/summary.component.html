@@ -9,17 +9,17 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-4 alert alert-info">
+      <div class="col-md-4 mat-primary mat-toolbar">
         <div class="text-lg padding-vertical">
           <p>Pour seulement <strong>{{quoteService.amount | number:'1.2-2'}}</strong> €/mois vous serez maintenant bien assuré</p>
         </div>
       </div>
 
       <div class="col-md-8">
-        <div class="row">
+        <div class="">
           <div class="list-group cart-details">
-            <div class="list-group-item cart-item" *ngIf="quoteService.habitation">
-              <div class="row">
+            <div class="list-group-item cart-item row" *ngIf="quoteService.habitation">
+              <div class="">
                 <div class="flex-item">
                   <a routerLink="/quote/habitation"  class="row-content-left cart-item-label">
                     <div class="row-content">
@@ -64,7 +64,7 @@
         </div>
 
         <div class="container-fluid">
-          <a routerLink="/quote/subscribtion" class="btn btn-lg btn-raised btn-primary center-block" id="summary-valid">
+          <a routerLink="/quote/subscribtion" class="mat-button mat-raised-button mat-primary center-block" id="summary-valid">
             Je poursuis ma demande
           </a>
           <a (click)="validAnonymousQuote()" class="center-block text-center" id="summary-cancel">Non merci, ça ne m'intéresse pas finalement</a>
@@ -80,7 +80,7 @@
         <div class="row">
           <div class="list-group">
             <div class="list-group-item">
-              <div class="row flex-item">
+              <div class="flex-item">
                 <a routerLink="/quote/valuable-item/1/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
                     <strong>Un objet numérique</strong>
@@ -88,7 +88,7 @@
                 </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/1/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-appareil-numerique">
+                    <button routerLink="/quote/valuable-item/1/habitation" class="mat-fab text-lg" id="summary-add-appareil-numerique">
                       <img src="/assets/images/product-type/smartphone.svg" alt="phone" />
                     </button>
                   </div>
@@ -96,7 +96,7 @@
               </div>
             </div>
             <div class="list-group-item">
-              <div class="row flex-item">
+              <div class="flex-item">
                 <a routerLink="/quote/valuable-item/2/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
                     <strong>Un objet de loisir</strong>
@@ -104,7 +104,7 @@
                 </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/2/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-materiel-loisir">
+                    <button routerLink="/quote/valuable-item/2/habitation" class="mat-fab text-lg" id="summary-add-materiel-loisir">
                       <img src="/assets/images/picto/velo.svg" alt="Vélo" />
                     </button>
                   </div>
@@ -112,7 +112,7 @@
               </div>
             </div>
             <div class="list-group-item">
-              <div class="row flex-item">
+              <div class="flex-item">
                 <a routerLink="/quote/valuable-item/3/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
                     <strong>Un objet précieux</strong>
@@ -120,7 +120,7 @@
                 </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button routerLink="/quote/valuable-item/3/habitation" class="btn btn-fab btn-info text-lg" id="summary-add-objet-precieux">
+                    <button routerLink="/quote/valuable-item/3/habitation" class="mat-fab text-lg" id="summary-add-objet-precieux">
                       <img src="/assets/images/picto/montre.svg" alt="Montre" />
                     </button>
                   </div>
@@ -128,7 +128,7 @@
               </div>
             </div>
             <div class="list-group-item" *ngIf="!quoteService.habitation">
-              <div class="row flex-item">
+              <div class="flex-item">
                 <a routerLink="/quote/habitation" class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
                       <strong>Une assurance habitation</strong>
@@ -136,7 +136,7 @@
                 </a>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button class="btn btn-fab btn-info text-lg" routerLink="/quote/habitation" id="summary-add-habitation">
+                    <button class="mat-fab text-lg" routerLink="/quote/habitation" id="summary-add-habitation">
                       <img src="/assets/images/picto/maison.svg" alt="Maison" />
                     </button>
                   </div>
@@ -144,7 +144,7 @@
               </div>
             </div>
             <div class="list-group-item" disabled>
-              <div class="row flex-item">
+              <div class="flex-item">
                 <div class="row-content-left">
                   <div class="row-content text-lg col-xs-12">
                     <strong style="color: #64d2af;">Une assurance santé</strong>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="row-content-right no-border">
                   <div class="row-picture">
-                    <button class="btn btn-fab btn-success text-lg" disabled>
+                    <button class="mat-fab text-lg" disabled>
                       <img src="/assets/images/picto/coeur.svg" alt="Santé" />
                     </button>
                   </div>
@@ -163,9 +163,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
-
 </div>

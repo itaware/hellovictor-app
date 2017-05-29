@@ -112,6 +112,8 @@ md-dialog-container.mat-dialog-container {
 }
 
 .mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  margin: 10px 1px;
+  padding: 5px 30px;
   font-family: unset;
   font-weight: 300;
   text-transform: uppercase;
@@ -128,4 +130,17 @@ md-dialog-container.mat-dialog-container {
 .mat-lg-button{
   padding: 5px 35px;
   font-size: 20px;
+}
+
+.mat-fab{
+  padding: 0;
+  background-color: $brand-info;
+  img{
+    max-height: 60%;
+    max-width: 60%;
+  }
+  &[disabled][disabled]{
+    background-color: #6e6e6e;
+    opacity: 0.65;
+  }
 }
