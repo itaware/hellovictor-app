@@ -9,6 +9,7 @@ import { ProductComponent, VideoDialogComponent } from './product/product.compon
 import { ValuableItemPageComponent } from './product/valuable-item-page/valuable-item-page.component';
 import { HabitationPageComponent } from './product/habitation-page/habitation-page.component';
 import { MetricsService } from './services/metrics.service';
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { MetricsService } from './services/metrics.service';
     }),
     MaterialModule,
     AppRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [
     AppComponent,

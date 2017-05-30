@@ -20,7 +20,7 @@ import { FinishComponent } from './finish/finish.component';
 import { UncompleteDialogComponent } from './uncomplete-dialog/uncomplete-dialog.component';
 import { QuoteRoutingModule } from './quote-routing.module';
 import { DatepickerComponent } from '../utils/datepicker/datepicker.component';
-import { ShareComponent } from '../share/share.component';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 @NgModule({
   imports: [
@@ -30,7 +30,8 @@ import { ShareComponent } from '../share/share.component';
     ReactiveFormsModule,
     MaterialModule,
     FlexLayoutModule,
-    QuoteRoutingModule
+    QuoteRoutingModule,
+    SharedComponentsModule
  ],
   declarations: [
     QuoteComponent,
@@ -46,7 +47,6 @@ import { ShareComponent } from '../share/share.component';
     FinishComponent,
     UncompleteDialogComponent,
     ConfirmDeteteDialogComponent,
-    ShareComponent,
     DatepickerComponent
   ],
   entryComponents: [
