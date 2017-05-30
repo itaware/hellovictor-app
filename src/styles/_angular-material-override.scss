@@ -126,6 +126,11 @@ md-dialog-container.mat-dialog-container {
   }
 
 }
+.mat-primary-border{
+  background: $brand-info;
+  color: #fff;
+  border: 1px solid #fff;
+}
 
 .mat-lg-button{
   padding: 5px 35px;
@@ -149,13 +154,12 @@ md-dialog-container.mat-dialog-container {
   p:last-child{
     margin-bottom: 0;
   }
+}
+.mat-toolbar-fixed-bottom{
   .mat-button, .mat-raised-button{
     margin: 0;
     padding: 0;
-    // .material-icon{
-    //   display:block;
-    // }
-  }
+  }  
 }
 .mat-input-container .mat-input-subscript-wrapper{
   top: calc(100% + 10px);
